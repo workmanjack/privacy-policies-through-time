@@ -27,6 +27,10 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'last modified on (\w+ \d+, \d+)'),
+    re.compile(r'Effective Date: (\w+ \d+, \d+)'),
+    re.compile(r'Last Updated: (\w+ \d+, \d+)'),
+    re.compile(r'Last revised on (\w+ \d+, \d+)'),
     re.compile(r'Revised: (\w+ \d+, \d+)'),
     re.compile(r'Revised ([^\.]*)'),
     re.compile(r'last updated in ([^\.]*)'),
@@ -252,7 +256,7 @@ def main():
     rows = list()
     company = config.get('company')
     os.makedirs(os.path.join(POLICY_DIR, company), exist_ok=True)
-    for cfg in config['configs'][1:]:
+    for cfg in config['configs']:
 
         policy_url = cfg.get('url')
         date_url = cfg.get('date_url', None)

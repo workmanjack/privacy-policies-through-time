@@ -1,0 +1,13 @@
+{
+    "company": "goodreads",
+    "configs": [
+        {
+            "url": "https://www.goodreads.com/about/privacy",
+            "start": {
+                "year": 2010,
+                "month": 2,
+                "day": 27
+            }
+        }
+    ]
+}
