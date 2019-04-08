@@ -27,6 +27,7 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'(\d+-\d+-\d+) privacy policy'),
     re.compile(r'effective as of (\w+ \d+, \d+)'),
     re.compile(r'last modified on (\w+ \d+, \d+)'),
     re.compile(r'Effective Date: (\w+ \d+, \d+)'),
@@ -334,6 +335,7 @@ def main():
     csv_path = os.path.join(POLICY_DIR, csv_out)
     with open(csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(['company', 'policy_date', 'policy_url', 'policy_path'])
         for row in rows:
             csvwriter.writerow(row)
     print('csv index written to {}'.format(csv_out))
