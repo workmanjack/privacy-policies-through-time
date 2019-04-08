@@ -1,0 +1,26 @@
+{
+    "company": "linkedin",
+    "configs": [
+        {
+            "url": "http://www.linkedin.com/static?key=privacy_policy",
+            "start": {
+                "year": 2005,
+                "month": 1,
+                "day": 1
+            },
+            "end": {
+                "year": 2015,
+                "month": 5,
+                "day": 14
+            }
+        },
+        {
+            "url": "http://www.linkedin.com/legal/privacy-policy",
+            "start": {
+                "year": 2015,
+                "month": 5,
+                "day": 14
+            }
+        }
+    ]
+}

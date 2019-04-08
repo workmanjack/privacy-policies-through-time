@@ -1,54 +1,57 @@
 
 Fitbit
 Products
-Fitness Wristbands and Clips
+Everyday
 Fitbit Zip®
 Fitbit One®
-Fitbit Flex 2™
-Fitbit Alta™
-Heart Rate + Fitness Wristbands
-Fitbit Alta HR™
-New
-Fitbit Charge 2™
-Smart Fitness Watches
+Fitbit Flex®
+Fitbit Charge™
+Active
+Fitbit Charge HR™
 Fitbit Blaze™
+new
+Performance
 Fitbit Surge™
-Smart Scale
+Wi-Fi Smart Scale
 Fitbit® Aria®
 FITBIT ACCESSORIES
-Designer
-Collections
+TORY BURCH FOR FITBIT
 Not sure which product is right for you? FIND YOUR FIT
-Why Fitbit
-Why Fitbit
-What's New
-Our Technology
-FitScience
-About Us
-Get Motivated
-Fitstar
-Events
-FitForGood
-Fitbit Premium
-App &amp; Dashboard
-App Tour
-Fitbit Challenges
+Experiences
+Mobile App + Dashboard
+Premium Membership
+FitStar
 Compatible Apps
+PurePulse
+Why Fitbit
+Fun
+Celebrity Challenges
+Fit Science
+Blog
+Buzz
+Fitness Quiz
+FitForGood
+Fitbit Local
 Help
 Product Help
-Forums
-Wear &amp; Care
-How-To Videos
+Wear and Care
 Your cart is currently empty. Let's shop
 Store
 Log in
 Setup
+<!--
+-->
+<!--
+-->
+<!--
+-->
+<!--
+-->
 Privacy Policy
-LAST UPDATED AUGUST 9, 2016
+LAST UPDATED DECEMBER 9, 2014
 our pledge
 We pledge to respect your privacy, to be transparent about our data practices, to keep your data safe, to never sell your personal data, to let you decide how your information is shared, and to only collect data that helps us improve our products and services.
-Fitbit designs products and tools that track everyday health and fitness to empower and inspire users to lead healthier, more active lives. This Privacy Policy applies to our personal fitness and electronic body monitoring products (“Devices”), our websites located at www.fitbit.com, corporate.fitbit.com, dev.fitbit.com, community.fitbit.com, help.fitbit.com and fitstar.com (individually a “Site” and collectively “Sites”), the Fitbit Connect software (“Software”), and Fitbit and FitStar mobile applications (the “Apps”). The Devices, Sites, Software and Apps are collectively referred to in this Policy as the “Fitbit Service.” By proceeding to use the Fitbit Service you consent that we may process the data that we collect from you in accordance with this Privacy Policy.
-We welcomed FitStar, Inc. to the Fitbit family in March 2015. This Privacy Policy covers your use of FitStar starting on August 9, 2016. Your rights have not changed and we will continue to honor the privacy promises made to your use of FitStar prior to August 9, 2016.
+Fitbit designs products and tools that track everyday health and fitness to empower and inspire users to lead healthier, more active lives. This Privacy Policy applies to our personal fitness and electronic body monitoring products (“Devices”), our websites located at www.fitbit.com, corporate.fitbit.com, dev.fitbit.com, community.fitbit.com, and help.fitbit.com (individually a “Site” and collectively “Sites”), the Fitbit Connect software (“Software”) and Fitbit mobile applications (the “Apps”). The Devices, Sites, Software and Apps are collectively referred to in this Policy as the “Fitbit Service,” and by proceeding to use the Fitbit Service you consent that we may process the data that we collect from you in accordance with this Privacy Policy.
 Because we’re always looking for new and innovative ways to help you achieve your fitness goals, this policy may change over time, but any future changes will not affect data that was collected under a previous version of this policy. If any modifications substantially change your rights, we will send an email summarizing the changes to the address associated with your Fitbit account and provide notice on the Site.
 And remember, we’re here to help. If something in this policy does not make sense or if you have any questions, please contact us at privacy@fitbit.com.
 Here’s what we’ll cover:
@@ -65,52 +68,52 @@ How Does Fitbit Handle Data From International Visitors?
 Does Fitbit Honor “Do Not Track” Signals?
 Contact Us
 When We Collect Data
-ACTIVATE A DEVICE
+Activate a Device
 When activating a Fitbit Device, you will be asked to download the Fitbit App or install Software and enter information about yourself, such as height, weight and gender. We use this information to personalize your fitness stats–for example, calories burned and distance traveled. Depending upon the specific Device you use, it can collect data such as the number of steps you take, your weight, measure your sleep quality and transmit this data to Fitbit. To see the full list of data that your Device collects, visit our Product Specifications page.
-CREATE A FITBIT ACCOUNT
+Create a Fitbit Account
 If you want to access data collected by your Device, you must create a Fitbit account. When you create a Fitbit account, we ask for some personal information, including your email address and date of birth. Your email address will be your Fitbit account user name, which you will use to log-into your account. We do not display your email address to other users. Instead, others will see the name or nickname you enter in your profile settings.
 You can also create your Fitbit account using a different credential such as a Facebook or Google+ account. We will ask permission to access basic information from that account, such as your name, profile picture, and friend list. You can stop sharing that information with us at any time by removing Fitbit’s access to that account. We will access your phone’s contact list for the purpose of letting you identify contacts who are Fitbit users. We do not store your phone’s contact list, and it is deleted immediately after it is used for this purpose.
-ADD INFO TO YOUR ACCOUNT
+Add Info to Your Account
 You can customize your Fitbit experience by adding other types of information to your account, such as entering a food log or setting an alarm, personalizing your profile with photos, participating in discussion boards, or sending messages to your Fitbit friends. Whenever you add this type of data, we collect it and store it in your Fitbit account.
-VISIT OUR SITES
+Visit Our Sites
 Fitbit collects industry standard data from everyone who visits our Sites—even if you don’t have a Fitbit account. This includes log data that automatically records information about your visit, such as your browser type, operating system, the URL of the page that referred you, the different actions you performed, and the IP address you used to access pages on the Site. We use this type of information to provide you with an experience that’s relevant to your location based on the IP address, to prevent Site misuse, and to ensure the Site is working properly. We also collect data from cookies. To see the full list cookies we use and how we use them, please read our Cookie Policy.
-SYNC YOUR DEVICE
+Sync Your Device
 When you sync your Device through an App or the Software, data recorded on your Device about your activity is transferred from your Device to our servers. This data is stored and used to provide the Fitbit Service and is associated with your account. Each time a sync occurs, we log data about the transmission. Some examples of the log data are the sync time and date, device battery level, and the IP address used when syncing.
-BUY FROM OUR STORE
+Buy From Our Store
 We do not view or store your credit card information. This is handled by our third-party payment processor. We store your shipping address so we can process your order through our fulfillment partner. If you are logged into your Fitbit account when you purchase something on our Site, we associate that order with your Fitbit account.
-CONTACT US
+Contact Us
 Whenever you contact Fitbit for help, we collect your name and email address along with additional information you provide in your request so that we can provide you with assistance and improve the Fitbit Service. If you contact us when you are already logged in to your account, the web form automatically pre-fills this information, so you don’t have to type it manually. You can also contact Fitbit on public forums such as Twitter or Facebook; however, we cannot maintain the privacy of your communication to us if you contact us through these channels.
-ADD FRIENDS
+Add Friends
 To help you stay motivated on your fitness journey, Fitbit lets you add friends who are already Fitbit users or invite friends who have not yet joined. You can add friends in several ways, such as by providing their email addresses, or by accessing social networking accounts or from the contact list on your phone. When you share your friends’ contact information with us to add them as a friend, we will only use it for this purpose. We do not store your phone’s contact list, and it is deleted immediately after it is used for this purpose.
-ACTIVATE LOCATION FEATURES
-The Fitbit Service includes features that require the collection of specific location data, including: GPS signals, device sensors, Wi-Fi access points, and cell tower IDs. We only collect this type of data when you activate a location feature, such as run mapping. We stop collecting this type of data when you deactivate the feature. We store this information in your Fitbit account. If you are using a mapping feature, we will send your location information to our mapping service provider so they can display your location on a map. They are contractually prevented from sharing or using this data for any other purpose.
+Activate Location Features
+The Fitbit Service includes features that require the collection of specific location data, including: GPS signals, device sensors, Wi-Fi access points, and cell tower IDs. We only collect this type of data when you activate a location feature, such as run mapping. We stop collecting this type of data when you deactivate the feature. We store this information in your Fitbit account. If you are using a mapping feature, we will send your location information to our mapping service provider so they can display your location on a map. They are contractually prevented from sharing or using this data for any other purpose
 We only collect information about you when you’re interacting with Fitbit Products &amp; Services.
-Why We Collect Data
+Why we collect data
 Fitbit uses your data to provide you with the best experience possible, to help you make the most of your fitness, and to improve and protect the Fitbit Service. Here are some examples:
 Height, weight, gender and age are used to estimate the number of calories you burn.
 Contact information is used to send you notifications, allow other Fitbit users to add you as a friend, and to inform you about new features or products we think you would be interested in. Please see “Can I Opt-out Of Receiving Fitbit Emails?” for information on how you can opt-out of future communications.
 Data and logs are used in research to understand and improve the Fitbit Device and Fitbit Service; to troubleshoot the Fitbit Service; to detect and protect against error, fraud or other criminal activity; and to enforce the Fitbit Terms of Service.
 De-identified data that does not identify you may be used to inform the health community about trends; for marketing and promotional use; or for sale to interested audiences. See “Sharing of De-identified Data That Does Not Identify You” to learn more.
-What Kinds of Data We Share
-DATA THAT COULD IDENTIFY YOU
+What kinds of data we share
+Data That Could Identify You
 Personally Identifiable Information (PII) is data that includes a personal identifier like your name, email or address, or data that could reasonably be linked back to you. We will only share this data under the following circumstances:
 With companies that are contractually engaged in providing us with services, such as order fulfillment, email management and credit card processing. These companies are obligated by contract to safeguard any PII they receive from us.
 If we believe that disclosure is reasonably necessary to comply with a law, regulation, valid legal process (e.g., subpoenas or warrants served on us), or governmental or regulatory request, to enforce or apply the Terms of Service or Terms of Sale, to protect the security or integrity of the Fitbit Service, and/or to protect the rights, property, or safety of Fitbit, its employees, users, or others. If we are going to release your data, we will do our best to provide you with notice in advance by email, unless we are prohibited by law from doing so.
 We may disclose or transfer your PII in connection with the sale, merger, bankruptcy, sale of assets or reorganization of our company. We will notify you if a different company will receive your PII and the promises in this Privacy Policy will apply to your data as transferred to the new entity.
-DATA THAT DOES NOT IDENTIFY YOU (DE-IDENTIFIED DATA)
+Data That Does Not Identify You (De-identified Data)
 Fitbit may share or sell aggregated, de-identified data that does not identify you, with partners and the public in a variety of ways, such as by providing research or reports about health and fitness or as part of our Premium membership. When we provide this information, we perform appropriate procedures so that the data does not identify you and we contractually prohibit recipients of the data from re-identifying it back to you.
-DATA THAT YOU DIRECT US TO SHARE
+Data that You Direct Us to Share
 You can direct us to share data with other parties. For example, you might authorize us to link your Fitbit account with a third-party app listed on https://www.fitbit.com/apps; send status updates to your Facebook or Twitter account; or direct us to share data with your employer as part of a wellness program. Once you direct us to share your data with a third party, that data is governed by the third-party’s privacy policy. You can revoke your consent to share with the third party at any time in your Fitbit account settings.
-Ways You Might Share Your Data
-DEFAULT VISIBILITY SETTINGS
+Ways you might share your data
+Default Visibility Settings
 The privacy settings on new Fitbit accounts are set to reveal minimal data about you with the purpose of getting you active and involved with the Fitbit Service. To see what is visible to others use the “Profile viewed by” tool in your account settings. You can adjust your privacy settings at www.fitbit.com/user/profile/privacy.
-FITBIT SOCIAL TOOLS
+Fitbit Social Tools
 Fitbit provides many ways for you to share data with other Fitbit users, such as with the 7-day Leaderboard, Challenges, or by posting comments to the Fitbit community message boards. When you interact with others in these ways, you will be displaying your data based upon the visibility settings in your Fitbit account settings. Always check specific policies associated with any Challenge to understand what data will be visible to other participants.
-COMMUNITY POSTS
+Community Posts
 To post to Fitbit community message boards, you’ll be asked to create a community username that’s separate from your Fitbit profile name. This community username will be posted next to any comments you publish on community message boards. Other information, like a profile photo that you’ve added to your Fitbit account will also be visible on message boards, depending on your Fitbit account settings.
-CONTESTS AND GIVEAWAYS
+Contests and Giveaways
 Fitbit may offer opportunities to participate in contests, giveaways and other promotions. Any data you submit in connection with these activities will be treated in accordance with this Privacy Policy, unless the rules for those offers note otherwise.
-SURVEYS
+Surveys
 Fitbit may also ask you to participate in surveys (processed by Fitbit or third parties) that help us understand your use of the Fitbit Service. Any PII you provide to Fitbit (or supplied by you or Fitbit to such third-party survey providers) in connection with these surveys will only be used in relation to that survey and as stated in this policy.
 How Long We Save Your Data
 We store your PII for as long as you maintain a Fitbit account.
@@ -125,16 +128,16 @@ Of course! You can opt-out of receiving weekly summaries, achievement notificati
 How Does Fitbit Keep My Data Safe?
 Fitbit uses a combination of technical and administrative security controls to maintain the security of your data. If you have a security-related concern, please contact Customer Support.
 How Does Fitbit Handle Data From International Visitors?
-The Services are hosted in the United States and are subject to United States law. We may share your personal information internally with our affiliates and other recipients, as described in this Privacy Policy, and they may be located in countries other than your country. If you are accessing the Services from outside the United States, please be advised that United States law and other countries may not offer the same privacy protections as the law of your jurisdiction.
-If you are a resident in the EEA or Switzerland, we will comply with applicable legal requirements providing adequate protection for the transfer of personal information to recipients in countries outside of the EEA and Switzerland. With respect to transfers of personal information to the U.S., Fitbit, Inc. is certified under the EU-U.S.
-Privacy Shield developed by the U.S. Department of Commerce and the European Commission, and the Swiss Safe Harbor framework, regarding the transfer of personal information from the EEA and Switzerland, respectively, to the U.S. Click here to view our EU-U.S. Privacy Shield Privacy Policy.
+The Fitbit Service is hosted and operated entirely in the United States and is subject to United States law. Any personal information that you provide to Fitbit is being transferred to Fitbit for use solely in the United States and will be hosted on United States servers. You consent to the transfer of your personal information to the United States. If you are accessing the Fitbit Service from outside the United States, please be advised that United States law may not offer the same privacy protections as the law of your jurisdiction.
+Fitbit complies with the U.S. - EU Safe Harbor Framework and the U.S. - Swiss Safe Harbor Framework as set forth by the U.S. Department of Commerce regarding the collection, use and retention of personal information from European Union member countries and Switzerland. Fitbit has certified that it adheres to the Safe Harbor Privacy Principles of notice, choice, onward transfer, security, data integrity, access, and enforcement. To learn more about the Safe Harbor program, and to view our certification page, please visit http://www.export.gov/safeharbor/. In compliance with the Safe Harbor Principles, Fitbit commits to resolve complaints about your privacy and our collection or use of your personal information. European Union and Swiss citizens with inquiries or complaints regarding this privacy policy should first contact support.
+Fitbit has further committed to refer unresolved privacy complaints under the Safe Harbor Principles to an independent dispute resolution mechanism, the BBB EU SAFE HARBOR, operated by the Council of Better Business Bureaus. If you do not receive timely acknowledgment of your complaint, or if your complaint is not satisfactorily addressed, please visit the BBB EU SAFE HARBOR website at www.bbb.org/us/safe-harbor-complaints for more information and to file a complaint.
 Cookie Policy
 We are generally a healthy bunch, but some Fitbit employees like to eat cookies. In addition, we use cookies and other technologies like pixel tags and web beacons to improve the functionality of the Fitbit Service.
-TECHNOLOGIES WE USE
+Technologies We Use
 Cookies are text files that are sent by servers to web browsers and stored on your computer. They tell us which parts of the Fitbit Service you’ve visited so we can figure out which promotions you may like to see or to alert you to software compatibility issues.
 Web beacons and pixel tags are images embedded in a webpage or email for the purpose of measuring and analyzing usage and activity. Fitbit, or third party service providers acting on our behalf, may use web beacons and pixel tags to help us analyze usage and improve our functionality.
 Social media tools, like widgets and plug-ins, are used so you can share information from Fitbit on other sites such Facebook and Twitter. These interactive mini-programs collect your IP address, record the pages you visit on our Sites, and set cookies that will enable the widget to function properly. Your interactions with these widgets are governed by the privacy policy of the company providing them, not by Fitbit’s Privacy Policy. We also use the Facebook and Twitter pixel tags to help us understand how effective our marketing is on those sites.
-DOES FITBIT HONOR “DO NOT TRACK” SIGNALS?
+Does Fitbit Honor “Do Not Track” Signals?
 Although we would like to honor the browsers set with a “Do Not Track” signal, the Sites do not currently respond to a DNT or similar signal as it awaits the results of efforts by the policy and legal community to determine the meaning of DNT and the proper way to respond. However, we believe that consumers should exercise choice regarding the collection of this type of data, which is why we disclose the cookies used and provide links to opt-out of those collection practices below.
 We use the following third-party advertising cookies to present you with opportunities to purchase Fitbit products on our Site; and retargeting cookies, to present you with Fitbit advertising on other websites based on your interaction on our Sites and other websites:
 AppNexus: The AppNexus Cookies page provides information about their cookie and gives you the option to opt out-of this program.
@@ -142,7 +145,8 @@ DataXu: The DataXu Data Collection for our Platform page explains their privac
 DoubleClick and DoubleClick Floodlight: This cookie and web beacon is owned by Google. You can adjust Google's use of cookies with Google's Ads Settings. You may permanently opt-out of the Google DoubleClick cookie.
 Google Adwords Conversion: You can adjust the Google Ads Settings and opt-out of this program.
 AdRoll: The AdRoll Privacy Policy explains how their cookie works and gives you the option to adjust or opt out of this program.
-Twitter Advertising: This cookie allows us to present you with retargeting advertising for Fitbit products on Twitter. This Twitter FAQ explains how their advertising program works and gives you the option to adjust your Twitter settings.
+Twitter Advertising: This cookie allows us to present you with retargeting advertising for Fitbit products on Twitter. This
+Twitter FAQ explains how their advertising program works and gives you the option to adjust your Twitter settings.
 LiveRamp: The LiveRamp Advertising Data Privacy Policy explains how their cookie works and gives you the option to opt out of this program.
 Advertising.com: Owned by AOL, you can opt-out and read more about this advertising program.
 Bidswitch: Owned by iponweb, you can opt-out and read more about this advertising program.

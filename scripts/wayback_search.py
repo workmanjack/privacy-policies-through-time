@@ -1,7 +1,9 @@
 from datetime import date, timedelta, datetime
 import dateparser
 import requests
+import argparse
 import json
+import csv
 import re
 import os
 
@@ -9,6 +11,7 @@ import os
 DEBUG = 0
 
 
+POLICY_DIR = '../privacy-policies-through-time/'
 # these are strings that signal the start/end of the wayback inserted html/js material in an
 # archived webpage - we use them to strip out the company's part of the archived page
 WAYBACK_HEADER_END = '<!-- END WAYBACK TOOLBAR INSERT -->'
@@ -24,8 +27,11 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'Revised: (\w+ \d+, \d+)'),
+    re.compile(r'Revised ([^\.]*)'),
+    re.compile(r'last updated in ([^\.]*)'),
     re.compile(r'last updated on (.*) \('),
-    re.compile(r'last updated on (.*)\.'),
+    re.compile(r'last updated on ([^\.]*)', flags=re.IGNORECASE),
     re.compile(r'Privacy Policy dated (.*)\n'),
     re.compile(r'Last update (.*)\n'),
     re.compile(r'LAST UPDATED (.*)\n', flags=re.IGNORECASE),
@@ -113,6 +119,7 @@ def make_policy_comparable(page, policy_bookends, timestamp):
             end_index = len(page)
 
         page = page[start_index:end_index]
+
     print_debug('after bookends = {}'.format(len(page)))
 
     # remove timestamps as they are unique and inserted by wayback
@@ -151,7 +158,12 @@ def get_update_date(page, regex_list):
         m = regex.search(page)
         update_date = None
         if m and len(m.group()) > 1:
-            update_date = dateparser.parse(m.group(1))
+            try:
+                # print(m.group(1))
+                update_date = dateparser.parse(m.group(1))
+                # print(update_date)
+            except RecursionError as exc:
+                print(exc)
             break
     if not update_date:
         print('update date not found!')
@@ -165,20 +177,95 @@ def read_config_file(path):
     return data
 
 
+def process_policy(company, url, timestamp, snapshots, last_date, write=True):
+    """
+    """
+    request_url = 'http://archive.org/wayback/available?url={}&timestamp={}'.format(url, timestamp)
+    data = api_query(request_url)
+    update_date = None
+    out = None
+
+    archive = data.get('archived_snapshots', {}).get('closest', None)
+    if archive and archive.get('available'):
+
+        # check if the returned nearest snapshot has been looked at already
+        archive_url = archive.get('url')
+        archive_timestamp = archive.get('timestamp')
+        if archive_timestamp in snapshots:
+            print('{} -> {}'.format(timestamp, archive_timestamp))
+        else:
+
+            resp = requests.get(url=archive_url)
+            if resp.status_code != 200:
+                print('failed to retrieve data from {0}'.format(url))
+            else:
+                page = resp.text
+
+                # it is debatable if this provides value
+                #page = remove_wayback(page)
+
+                # trim policy
+                page = make_policy_comparable(page, POLICY_BOOKENDS, archive_timestamp)
+                update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
+
+                # check dates
+                if update_date and last_date and update_date == last_date:
+                    print('{} no change'.format(archive_timestamp))
+                    update_date = None
+                else:
+                    last_date = update_date
+                    if update_date:
+                        out_date = update_date.strftime('%Y-%m-%d')
+                        out = '{}/{}-{}.txt'.format(company, company, out_date)
+                        out_path = os.path.join(POLICY_DIR, out)
+                    else:
+                        out = '{}_check_date.txt'.format(archive_timestamp)
+                        out_path = out
+                        print(url)
+                    with open(out_path, 'wb') as f:
+                        f.write(page.encode('UTF-8'))
+
+                    print('{} ({}) written to {}'.format(archive_timestamp, update_date, out))
+
+    return archive_timestamp, archive_url, update_date, out
+
+
+def parse_args():
+
+    # parse args
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--config', action='store', type=str, required=True, help='Company config file for searching')
+    args = parser.parse_args()
+
+    # arg sanity check
+    if not os.path.exists(args.config):
+        raise ValueError('Config {} does not exist!'.format(args.config))
+
+    return args
+
+
 def main():
 
-    configs = read_config_file('configs/fitbit.json')
-    print(configs)
+    args = parse_args()
+    config = read_config_file(args.config)
+    print(config)
     rows = list()
-    for cfg in configs['configs']:
+    company = config.get('company')
+    os.makedirs(os.path.join(POLICY_DIR, company), exist_ok=True)
+    for cfg in config['configs'][1:]:
 
-        company = cfg.get('company')
         policy_url = cfg.get('url')
-        row = [company]
+        date_url = cfg.get('date_url', None)
         print('Searching {}'.format(policy_url))
-        start_date = date(cfg.get('year'), cfg.get('month'), cfg.get('day'))
+        start_cfg = cfg.get('start')
+        start_date = date(start_cfg.get('year'), start_cfg.get('month'), start_cfg.get('day'))
         print('Starting with {}'.format(start_date))
-        end_date = date.today()
+        end_cfg = cfg.get('end', None)
+        if end_cfg:
+            end_date = date(end_cfg.get('year'), end_cfg.get('month'), end_cfg.get('day'))
+        else:
+            end_date = date.today()
+        print('Ending with {}'.format(end_date))
 
         # iterate through dates, query wayback, retrieve snapshots
         # if snapshot is new, then get page source; else, continue
@@ -187,51 +274,38 @@ def main():
         last_date = None
         for year, month in month_year_iter(start_date.month, start_date.year, end_date.month, end_date.year):
 
+            row = [company]
+
             check_date = date(year, month, 1)
             # check if snapshot exists for this date
             timestamp = check_date.strftime('%Y%m%d')
-            request_url = 'http://archive.org/wayback/available?url={}&timestamp={}'.format(policy_url, timestamp)
-            data = api_query(request_url)
 
-            archive = data.get('archived_snapshots', {}).get('closest', None)
-            if archive and archive.get('available'):
+            archive_timestamp, archive_url, policy_date, policy_path = process_policy(company, policy_url, timestamp, snapshots, last_date)
 
-                # check if the returned nearest snapshot has been looked at already
-                archive_url = archive.get('url')
-                archive_timestamp = archive.get('timestamp')
-                if archive_timestamp in snapshots:
-                    print('{} -> {}'.format(timestamp, archive_timestamp))
-                    continue
+            if date_url:
+                # some websites have the update date on a different page than the privacy policy, we handle that here
+                _, _, policy_date, _ = process_policy(company, date_url, timestamp, snapshots, last_date, write=True)
 
+            # a bit hacky but this is how we know if we are done or not
+            if policy_path and '_check_date' not in policy_path:
+                # no need to save if we skip due to snapshots
+                last_date = policy_date
                 snapshots.append(archive_timestamp)
+                row.append(policy_date)
+                row.append(archive_url)
+                row.append(policy_path)
+                rows.append(row)
+            elif policy_path and '_check_date' in policy_path:
+                # we couldn't detect the date... abort
+                break
 
-                resp = requests.get(url=archive_url)
-                if resp.status_code != 200:
-                    print('failed to retrieve data from {0}'.format(url))
-                else:
-                    page = resp.text
-
-                    # it is debatable if this provides value
-                    #page = remove_wayback(page)
-
-                    # trim policy
-                    page_pretty = make_policy_comparable(page, POLICY_BOOKENDS, archive_timestamp)
-                    #page_compare, page_pretty = make_policy_comparable(page, POLICY_BOOKENDS, archive_timestamp)
-                    update_date = get_update_date(page_pretty, regex_list=REGEX_POLICY_DATE_LIST)
-
-                    # check dates
-                    if update_date and last_date and update_date == last_date:
-                        print('{} no change'.format(archive_timestamp))
-                    else:
-                        last_date = update_date
-                        out = '{}{}.txt'.format(archive_timestamp, '' if update_date else '_check_date')
-                        with open(out, 'wb') as f:
-                            f.write(page_pretty.encode('UTF-8'))
-
-                        print('{} ({}) written to {}'.format(archive_timestamp, update_date, out))
-                        if not update_date:
-                            # exit because we need to fix the update date miss before moving on
-                            break
+    csv_out = '{}-privacy-policies-index.csv'.format(company)
+    csv_path = os.path.join(POLICY_DIR, csv_out)
+    with open(csv_path, 'w') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        for row in rows:
+            csvwriter.writerow(row)
+    print('csv index written to {}'.format(csv_out))
 
     return
 

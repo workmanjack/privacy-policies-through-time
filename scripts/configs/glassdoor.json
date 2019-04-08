@@ -1,0 +1,27 @@
+{
+    "company": "glassdoor",
+    "configs": [
+        {
+            "url": "http://www.glassdoor.com:80/about/privacy.htm",
+            "start": {
+                "year": 2008,
+                "month": 6,
+                "day": 15
+            },
+            "end": {
+                "year": 2014,
+                "month": 10,
+                "day": 7
+            }
+        },
+        {
+            "url": "http://www.glassdoor.com/about/privacy-full.htm",
+            "date_url": "https://www.glassdoor.com/about/privacy.htm",
+            "start": {
+                "year": 2014,
+                "month": 10,
+                "day": 7
+            }
+        }
+    ]
+}
