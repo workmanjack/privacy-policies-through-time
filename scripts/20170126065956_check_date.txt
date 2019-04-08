@@ -1,0 +1,35 @@
+
+Features
+Security
+Families
+Teams
+Pricing
+Support
+Sign in
+Sign in
+Try it FREE
+Privacy
+Protecting your privacy is the cornerstone of everything we do.
+Private By Design
+With any service, it is very important to think about your privacy. We believe strongly that your data is yours and we don’t want to know anything about it. This is one of the fundamental beliefs 1Password was built upon.
+Our goal is to make the best security software in the world. But security and privacy go hand-in-hand &mdash; you cannot have one without the other. No matter how many locks we put in place, it would all be for nothing if someone could circumvent the protections and view your data. The security of our product depends entirely on how good a job we do at honouring your privacy.
+That’s why our privacy policy is simple: your data is your data. We don’t use it, we don’t share it, and we don’t sell it. You’re our customer, not our product.
+Our business relies on trust and reputation. Earning the trust of millions of customers and security professionals over the course of the past decade took more than promises. It took an open security design that enforces privacy though encryption and proven mathematical principles.
+Those principles ensure that you and your team are the only ones with the keys to your data. There are no back doors. We know so little about your data that we are proud to say we can’t reset your Master Password, even if you asked us to. This is what we call “Private By Design,” and it’s the basis of everything we do.
+Thank you for trusting us with your most important information. We won’t let you down.
+Minimal Data Collection Policy
+We go to great lengths to collect as little information about you as possible. The way we designed Watchtower is just one example of how we put privacy first.
+Watchtower alerts you to vulnerabilities on the sites you use. Instead of sending a list of your used websites to the server, 1Password downloads the full vulnerability list to your device and checks your logins locally, keeping your data completely private.
+How we store (or don’t store) your data
+Vaults and items
+Your vaults, items, and documents are fully encrypted in your 1Password Families and 1Password Teams and stored on our servers. None of this information is accessible to us in any way.
+Credentials
+Your Master Password and Account Key are never transmitted to the server. We do not know them and cannot reveal, reset, or recover them.
+Devices
+When you authenticate a device with 1Password Families and 1Password Teams, its name, OS, and user agent are stored unencrypted. This helps our customer service staff assist you quickly.
+Your Account
+Along with your account name and domain, we also store the names and email addresses of all invited family or team members. This allows us to send out notifications.
+Images
+Vault icons and profile photos for members are stored unencrypted. We hope to find a way to change this in the future.
+Icons
+Rich Icons for items are downloaded from our CacheFly server. We do not log or store any information about which Rich Icons you are using.

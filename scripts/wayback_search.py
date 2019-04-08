@@ -258,70 +258,81 @@ def main():
     rows = list()
     company = config.get('company')
     os.makedirs(os.path.join(POLICY_DIR, company), exist_ok=True)
-    for cfg in config['configs']:
 
-        policy_url = cfg.get('url')
-        date_url = cfg.get('date_url', None)
-        ignores = cfg.get('ignore', list())
-        print('Searching {}'.format(policy_url))
-        start_cfg = cfg.get('start')
-        start_date = date(start_cfg.get('year'), start_cfg.get('month'), start_cfg.get('day'))
-        print('Starting with {}'.format(start_date))
-        end_cfg = cfg.get('end', None)
-        if end_cfg:
-            end_date = date(end_cfg.get('year'), end_cfg.get('month'), end_cfg.get('day'))
-        else:
-            end_date = date.today()
-        print('Ending with {}'.format(end_date))
+    links = config.get('links', None)
+    if links:
+        # for when we have the direct links to previous policies
+        for link in links:
+            policy_date, policy_path = process_policy(company, link, 'linked', None)
+            row = [policy_date, link, policy_path]
+            rows.append(row)
 
-        # iterate through dates, query wayback, retrieve snapshots
-        # if snapshot is new, then get page source; else, continue
-        snapshots = list()
-        last_page = ''
-        last_date = None
-        for year, month in month_year_iter(start_date.month, start_date.year, end_date.month, end_date.year):
+    else:
 
-            row = [company]
+        for cfg in config['configs']:
 
-            check_date = date(year, month, 1)
-            # check if snapshot exists for this date
-            timestamp = check_date.strftime('%Y%m%d')
+            policy_url = cfg.get('url')
+            date_url = cfg.get('date_url', None)
+            ignores = cfg.get('ignore', list())
+            print('Searching {}'.format(policy_url))
+            start_cfg = cfg.get('start')
+            start_date = date(start_cfg.get('year'), start_cfg.get('month'), start_cfg.get('day'))
+            print('Starting with {}'.format(start_date))
+            end_cfg = cfg.get('end', None)
+            if end_cfg:
+                end_date = date(end_cfg.get('year'), end_cfg.get('month'), end_cfg.get('day'))
+            else:
+                end_date = date.today()
+            print('Ending with {}'.format(end_date))
 
-            if timestamp in ignores:
-                print('Ignoring {}'.format(timestamp))
-                continue
+            # iterate through dates, query wayback, retrieve snapshots
+            # if snapshot is new, then get page source; else, continue
+            snapshots = list()
+            last_page = ''
+            last_date = None
+            for year, month in month_year_iter(start_date.month, start_date.year, end_date.month, end_date.year):
 
-            archive_url, archive_timestamp = go_wayback(policy_url, timestamp)
+                row = [company]
 
-            if archive_timestamp in snapshots:
-                print('{} -> {}'.format(timestamp, archive_timestamp))
-                continue
+                check_date = date(year, month, 1)
+                # check if snapshot exists for this date
+                timestamp = check_date.strftime('%Y%m%d')
 
-            policy_date, policy_path = process_policy(company, archive_url, archive_timestamp, last_date)
+                if timestamp in ignores:
+                    print('Ignoring {}'.format(timestamp))
+                    continue
 
-            if date_url:
-                # some websites have the update date on a different page than the privacy policy, we handle that here
-                _, _, policy_date, _ = process_policy(company, date_url, timestamp, snapshots, last_date, write=True)
+                archive_url, archive_timestamp = go_wayback(policy_url, timestamp)
 
-            if not policy_date:
-                print('Check date (timestamp={}, archive={})'.format(timestamp, archive_timestamp))
+                if archive_timestamp in snapshots:
+                    print('{} -> {}'.format(timestamp, archive_timestamp))
+                    continue
 
-            # a bit hacky but this is how we know if we are done or not
-            elif policy_path and '_check_date' not in policy_path:
-                # no need to save if we skip due to snapshots
-                last_date = policy_date
-                snapshots.append(archive_timestamp)
-                row.append(policy_date)
-                row.append(archive_url)
-                row.append(policy_path)
-                rows.append(row)
-            elif policy_path and '_check_date' in policy_path:
-                # we couldn't detect the date... abort
-                break
+                policy_date, policy_path = process_policy(company, archive_url, archive_timestamp, last_date)
+
+                if date_url:
+                    # some websites have the update date on a different page than the privacy policy, we handle that here
+                    _, _, policy_date, _ = process_policy(company, date_url, timestamp, snapshots, last_date, write=True)
+
+                if not policy_date:
+                    print('Check date (timestamp={}, archive={})'.format(timestamp, archive_timestamp))
+
+                # a bit hacky but this is how we know if we are done or not
+                if policy_path and '_check_date' not in policy_path:
+                    # no need to save if we skip due to snapshots
+                    last_date = policy_date
+                    snapshots.append(archive_timestamp)
+                    row.append(policy_date)
+                    row.append(archive_url)
+                    row.append(policy_path)
+                    rows.append(row)
+                elif policy_path and '_check_date' in policy_path:
+                    # we couldn't detect the date... abort
+                    break
 
     csv_out = '{}-privacy-policies-index.csv'.format(company)
     csv_path = os.path.join(POLICY_DIR, csv_out)
-    with open(csv_path, 'w') as csvfile:
+    with open(csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         for row in rows:
             csvwriter.writerow(row)
