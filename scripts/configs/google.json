@@ -1,0 +1,40 @@
+{
+    "company": "google",
+    "links": [
+        "https://policies.google.com/privacy/archive/19990609?hl=en-US",
+        "https://policies.google.com/privacy/archive/19990920?hl=en-US",
+        "https://policies.google.com/privacy/archive/20010104?hl=en-US",
+        "https://policies.google.com/privacy/archive/20040701?hl=en-US",
+        "https://policies.google.com/privacy/archive/20051014?hl=en-US",
+        "https://policies.google.com/privacy/archive/20080807?hl=en-US",
+        "https://policies.google.com/privacy/archive/20090127?hl=en-US",
+        "https://policies.google.com/privacy/archive/20090311?hl=en-US",
+        "https://policies.google.com/privacy/archive/20101003?hl=en-US",
+        "https://policies.google.com/privacy/archive/20111020?hl=en-US",
+        "https://policies.google.com/privacy/archive/20120301?hl=en-US",
+        "https://policies.google.com/privacy/archive/20120727?hl=en-US",
+        "https://policies.google.com/privacy/archive/20130624?hl=en-US",
+        "https://policies.google.com/privacy/archive/20131220?hl=en-US",
+        "https://policies.google.com/privacy/archive/20140331?hl=en-US",
+        "https://policies.google.com/privacy/archive/20141219?hl=en-US",
+        "https://policies.google.com/privacy/archive/20150225?hl=en-US",
+        "https://policies.google.com/privacy/archive/20150501?hl=en-US",
+        "https://policies.google.com/privacy/archive/20150605?hl=en-US",
+        "https://policies.google.com/privacy/archive/20150630?hl=en-US",
+        "https://policies.google.com/privacy/archive/20150819?hl=en-US",
+        "https://policies.google.com/privacy/archive/20160325?hl=en-US",
+        "https://policies.google.com/privacy/archive/20160628?hl=en-US",
+        "https://policies.google.com/privacy/archive/20160829?hl=en-US",
+        "https://policies.google.com/privacy/archive/20170301?hl=en-US",
+        "https://policies.google.com/privacy/archive/20170417?hl=en-US",
+        "https://policies.google.com/privacy/archive/20171002?hl=en-US",
+        "https://policies.google.com/privacy/archive/20171218?hl=en-US",
+        "https://policies.google.com/privacy/archive/20180525?hl=en-US",
+        "https://policies.google.com/privacy?hl=en-US"
+    ],
+    "dates": [
+        ["https://policies.google.com/privacy/archive/19990920?hl=en-US", "19990920"],
+        ["https://policies.google.com/privacy/archive/20010104?hl=en-US", "20010104"],
+        ["https://policies.google.com/privacy/archive/20040701?hl=en-US", "20040701"]
+    ]
+}

@@ -27,11 +27,13 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'Last modified: (\w+ \d+, \d+)'),
     re.compile(r'(\d+-\d+-\d+) privacy policy'),
     re.compile(r'effective as of (\w+ \d+, \d+)'),
     re.compile(r'last modified on (\w+ \d+, \d+)'),
     re.compile(r'Effective Date: (\w+ \d+, \d+)'),
     re.compile(r'Last Updated: *(\w+ \d+, \d+)', flags=re.IGNORECASE),
+    re.compile(r'Last Updated: *(\d+ \w+ \d+)', flags=re.IGNORECASE),
     re.compile(r'Last revised on (\w+ \d+, \d+)'),
     re.compile(r'Revised: (\w+ \d+, \d+)'),
     re.compile(r'Revised ([^\.]*)'),
@@ -42,7 +44,8 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Last update (.*)\n'),
     re.compile(r'LAST UPDATED (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
-    re.compile(r'Effective: (.*)\n')
+    re.compile(r'Effective: (.*)\n'),
+    re.compile(r'Effective (\w+ \d+, \d+)')
 ]
 
 
@@ -197,6 +200,13 @@ def go_wayback(url, timestamp):
     return archive_url, archive_timestamp
 
 
+def make_policy_file_name(company, update_date):
+    out_date = update_date.strftime('%Y-%m-%d')
+    out = '{}/{}-{}.txt'.format(company, company, out_date)
+    out_path = os.path.join(POLICY_DIR, out)
+    return out_path, out
+
+
 def process_policy(company, archive_url, archive_timestamp, last_date, write=True):
     """
     """
@@ -222,9 +232,7 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
         else:
             last_date = update_date
             if update_date:
-                out_date = update_date.strftime('%Y-%m-%d')
-                out = '{}/{}-{}.txt'.format(company, company, out_date)
-                out_path = os.path.join(POLICY_DIR, out)
+                out_path, out = make_policy_file_name(company, update_date)
             else:
                 out = '{}_check_date.txt'.format(archive_timestamp)
                 out_path = out
@@ -265,6 +273,16 @@ def main():
         # for when we have the direct links to previous policies
         for link in links:
             policy_date, policy_path = process_policy(company, link, 'linked', None)
+            if not policy_date:
+                # failed to read date from document, do we have it in config?
+                dates = config.get('dates', list())
+                for d in dates:
+                    if link == d[0]:
+                        policy_date = dateparser.parse(d[1])
+                        print('Found date in config: {}'.format(policy_date))
+                        out_path, out = make_policy_file_name(company, policy_date)
+                        os.rename(policy_path, out_path)
+                        print('Moved _check_date to {}'.format(out_path))
             row = [policy_date, link, policy_path]
             rows.append(row)
 
