@@ -27,9 +27,10 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'effective as of (\w+ \d+, \d+)'),
     re.compile(r'last modified on (\w+ \d+, \d+)'),
     re.compile(r'Effective Date: (\w+ \d+, \d+)'),
-    re.compile(r'Last Updated: (\w+ \d+, \d+)'),
+    re.compile(r'Last Updated: *(\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last revised on (\w+ \d+, \d+)'),
     re.compile(r'Revised: (\w+ \d+, \d+)'),
     re.compile(r'Revised ([^\.]*)'),
@@ -181,57 +182,58 @@ def read_config_file(path):
     return data
 
 
-def process_policy(company, url, timestamp, snapshots, last_date, write=True):
-    """
-    """
+def go_wayback(url, timestamp):
+
     request_url = 'http://archive.org/wayback/available?url={}&timestamp={}'.format(url, timestamp)
     data = api_query(request_url)
     update_date = None
     out = None
 
-    archive = data.get('archived_snapshots', {}).get('closest', None)
-    if archive and archive.get('available'):
+    archive = data.get('archived_snapshots', {}).get('closest', {})
+    archive_url = archive.get('url', None)
+    archive_timestamp = archive.get('timestamp', None)
 
-        # check if the returned nearest snapshot has been looked at already
-        archive_url = archive.get('url')
-        archive_timestamp = archive.get('timestamp')
-        if archive_timestamp in snapshots:
-            print('{} -> {}'.format(timestamp, archive_timestamp))
+    return archive_url, archive_timestamp
+
+
+def process_policy(company, archive_url, archive_timestamp, last_date, write=True):
+    """
+    """
+    update_date = None
+    out = None
+
+    resp = requests.get(url=archive_url)
+    if resp.status_code != 200:
+        print('failed to retrieve data from {0}'.format(url))
+    else:
+        page = resp.text
+
+        # it is debatable if this provides value
+        #page = remove_wayback(page)
+
+        # trim policy
+        page = make_policy_comparable(page, POLICY_BOOKENDS, archive_timestamp)
+        update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
+
+        # check dates
+        if update_date and last_date and update_date == last_date:
+            print('{} no change'.format(archive_timestamp))
         else:
-
-            resp = requests.get(url=archive_url)
-            if resp.status_code != 200:
-                print('failed to retrieve data from {0}'.format(url))
+            last_date = update_date
+            if update_date:
+                out_date = update_date.strftime('%Y-%m-%d')
+                out = '{}/{}-{}.txt'.format(company, company, out_date)
+                out_path = os.path.join(POLICY_DIR, out)
             else:
-                page = resp.text
+                out = '{}_check_date.txt'.format(archive_timestamp)
+                out_path = out
+            if write:
+                with open(out_path, 'wb') as f:
+                    f.write(page.encode('UTF-8'))
 
-                # it is debatable if this provides value
-                #page = remove_wayback(page)
+                print('{} ({}) written to {}'.format(archive_timestamp, update_date, out))
 
-                # trim policy
-                page = make_policy_comparable(page, POLICY_BOOKENDS, archive_timestamp)
-                update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
-
-                # check dates
-                if update_date and last_date and update_date == last_date:
-                    print('{} no change'.format(archive_timestamp))
-                    update_date = None
-                else:
-                    last_date = update_date
-                    if update_date:
-                        out_date = update_date.strftime('%Y-%m-%d')
-                        out = '{}/{}-{}.txt'.format(company, company, out_date)
-                        out_path = os.path.join(POLICY_DIR, out)
-                    else:
-                        out = '{}_check_date.txt'.format(archive_timestamp)
-                        out_path = out
-                        print(url)
-                    with open(out_path, 'wb') as f:
-                        f.write(page.encode('UTF-8'))
-
-                    print('{} ({}) written to {}'.format(archive_timestamp, update_date, out))
-
-    return archive_timestamp, archive_url, update_date, out
+    return update_date, out
 
 
 def parse_args():
@@ -260,6 +262,7 @@ def main():
 
         policy_url = cfg.get('url')
         date_url = cfg.get('date_url', None)
+        ignores = cfg.get('ignore', list())
         print('Searching {}'.format(policy_url))
         start_cfg = cfg.get('start')
         start_date = date(start_cfg.get('year'), start_cfg.get('month'), start_cfg.get('day'))
@@ -284,14 +287,27 @@ def main():
             # check if snapshot exists for this date
             timestamp = check_date.strftime('%Y%m%d')
 
-            archive_timestamp, archive_url, policy_date, policy_path = process_policy(company, policy_url, timestamp, snapshots, last_date)
+            if timestamp in ignores:
+                print('Ignoring {}'.format(timestamp))
+                continue
+
+            archive_url, archive_timestamp = go_wayback(policy_url, timestamp)
+
+            if archive_timestamp in snapshots:
+                print('{} -> {}'.format(timestamp, archive_timestamp))
+                continue
+
+            policy_date, policy_path = process_policy(company, archive_url, archive_timestamp, last_date)
 
             if date_url:
                 # some websites have the update date on a different page than the privacy policy, we handle that here
                 _, _, policy_date, _ = process_policy(company, date_url, timestamp, snapshots, last_date, write=True)
 
+            if not policy_date:
+                print('Check date (timestamp={}, archive={})'.format(timestamp, archive_timestamp))
+
             # a bit hacky but this is how we know if we are done or not
-            if policy_path and '_check_date' not in policy_path:
+            elif policy_path and '_check_date' not in policy_path:
                 # no need to save if we skip due to snapshots
                 last_date = policy_date
                 snapshots.append(archive_timestamp)

@@ -1,0 +1,55 @@
+{
+    "company": "netflix",
+    "configs": [
+        {
+            "url": "http://www.netflix.com/PrivacyPolicy",
+            "start": {
+                "year": 2004,
+                "month": 2,
+                "day": 2
+            },
+            "end": {
+                "year": 2011,
+                "month": 5,
+                "day": 11
+            },
+            "ignore": [
+                "20060401", "20060501", "20090601"
+            ]
+        },
+        {
+            "url": "https://signup.netflix.com/PrivacyPolicy",
+            "start": {
+                "year": 2012,
+                "month": 5,
+                "day": 1
+            },
+            "end": {
+                "year": 2013,
+                "month": 4,
+                "day": 6
+            }
+        },
+        {
+            "url": "https://www.netflix.com/privacy",
+            "start": {
+                "year": 2015,
+                "month": 10,
+                "day": 17
+            },
+            "end": {
+                "year": 2018,
+                "month": 12,
+                "day": 22
+            }
+        },
+        {
+            "url": "https://help.netflix.com/en/legal/privacy",
+            "start": {
+                "year": 2018,
+                "month": 12,
+                "day": 22
+            }
+        }
+    ]
+}
