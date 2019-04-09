@@ -4,6 +4,7 @@ import os
 
 
 MASTER_CSV = os.path.join(POLICY_DIR, 'master-privacy-policies-index.csv')
+PROBLEM_COMPANIES = ['linkedin', 'pinterest', 'glassdoor', 'oracle']
 
 
 def main():
