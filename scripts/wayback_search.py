@@ -45,7 +45,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'LAST UPDATED (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Effective: (.*)\n'),
-    re.compile(r'Effective (\w+ \d+, \d+)')
+    re.compile(r'Effective: (\w+ \d+, \d+)')
 ]
 
 
