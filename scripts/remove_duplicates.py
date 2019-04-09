@@ -8,17 +8,19 @@ wayback_search.py version or simply by the wayback service pointing
 us to a slightly different date of an archived version of a website
 one time vs another.
 """
-from wayback_search import POLICY_DIR
+from wayback_search import POLICY_DIR, make_index_file_name
+import pandas as pd
 import filecmp
 import os
 
 
 def main():
 
-    company_dirs = [os.path.join(POLICY_DIR, x) for x in os.listdir(POLICY_DIR) if '.csv' not in x]
+    company_dirs = [(os.path.join(POLICY_DIR, x), x) for x in os.listdir(POLICY_DIR) if '.csv' not in x]
     print(company_dirs)
 
-    for cdir in company_dirs:
+    removed = list()
+    for cdir, company in company_dirs:
         # there should only be policies in the dir but here we double-check
         policies = [os.path.join(cdir, x) for x in os.listdir(cdir) if '.txt' in x]
         print(cdir)
@@ -34,6 +36,16 @@ def main():
                 if same:
                     print('same!')
                     os.remove(p2)
+                    removed.append((company, p2_name))
+
+    print('Removed: {}'.format(removed))
+    # now we have to remove these entries from the index files
+    for company, dead_policy in removed:
+        cindex = os.path.join(POLICY_DIR, make_index_file_name(company))
+        df = pd.read_csv(cindex)
+        df = df[~df.policy_path.str.contains(dead_policy)]
+        df.to_csv(cindex, index=False)
+        print('fixed {}'.format(cindex))
 
 
 if __name__ == '__main__':

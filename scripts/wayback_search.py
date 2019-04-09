@@ -211,6 +211,10 @@ def go_wayback(url, timestamp):
     return archive_url, archive_timestamp
 
 
+def make_index_file_name(company):
+    return '{}-privacy-policies-index.csv'.format(company)
+
+
 def make_policy_file_name(company, update_date):
     out_date = update_date.strftime('%Y-%m-%d')
     out = '{}/{}-{}.txt'.format(company, company, out_date)
@@ -363,7 +367,7 @@ def main():
                     # we couldn't detect the date... abort
                     break
 
-    csv_out = '{}-privacy-policies-index.csv'.format(company)
+    csv_out = make_index_file_name(company)
     csv_path = os.path.join(POLICY_DIR, csv_out)
     with open(csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
