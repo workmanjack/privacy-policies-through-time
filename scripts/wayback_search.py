@@ -293,7 +293,7 @@ def main():
                         out_path, out = make_policy_file_name(company, policy_date)
                         os.rename(policy_path, out_path)
                         print('Moved _check_date to {}'.format(out_path))
-            row = [policy_date, link, policy_path]
+            row = [company, policy_date, link, policy_path]
             rows.append(row)
 
     configs = config.get('configs', None)
