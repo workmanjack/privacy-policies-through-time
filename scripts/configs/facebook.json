@@ -1,0 +1,31 @@
+{
+    "company": "facebook",
+    "configs": [
+        {
+            "url": "http://www.facebook.com/policy.php",
+            "start": {
+                "year": 2006,
+                "month": 3,
+                "day": 31
+            },
+            "end": {
+                "year": 2011,
+                "month": 8,
+                "day": 26
+            }
+        },
+        {
+            "url": "http://www.facebook.com/full_data_use_policy",
+            "start": {
+                "year": 2011,
+                "month": 9,
+                "day": 29
+            },
+            "end": {
+                "year": 2018,
+                "month": 9,
+                "day": 1
+            }
+        }
+    ]
+}

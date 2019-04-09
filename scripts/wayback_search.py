@@ -28,6 +28,7 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'Last Revision: (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last Revised: (\w+ \d+, \d+)'),
     re.compile(r'posted as of:? (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last modified: (\w+ \d+, \d+)'),
