@@ -1,4 +1,5 @@
 from datetime import date, timedelta, datetime
+from shutil import move
 import urllib.parse
 import dateparser
 import requests
@@ -53,7 +54,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'LAST UPDATED (\w+,? \d+)', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Effective:? (.*)\n', flags=re.IGNORECASE),
-    re.compile(r'Effective: (\w+ \d+, \d+)', flags=re.IGNORECASE),
+    re.compile(r'Effective:? (\w+ \d+, \d+)', flags=re.IGNORECASE),
 ]
 
 
@@ -291,7 +292,7 @@ def main():
                         policy_date = dateparser.parse(d[1])
                         print('Found date in config: {}'.format(policy_date))
                         out_path, out = make_policy_file_name(company, policy_date)
-                        os.rename(policy_path, out_path)
+                        move(policy_path, out_path)
                         print('Moved _check_date to {}'.format(out_path))
             row = [company, policy_date, link, policy_path]
             rows.append(row)
