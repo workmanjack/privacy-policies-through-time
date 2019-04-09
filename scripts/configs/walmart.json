@@ -1,0 +1,65 @@
+{
+    "company": "walmart",
+    "configs": [
+        {
+            "url": "http://www.walmart.com/catalog/catalog.gsp?cat=121240&path=0%3A5436%3A120160%3A119833%3A120621%3A121724",
+            "start": {
+                "year": 2005,
+                "month": 1,
+                "day": 22
+            },
+            "end": {
+                "year": 2006,
+                "month": 3,
+                "day": 12
+            }
+        },
+        {
+            "url": "http://www.walmart.com:80/catalog/catalog.gsp?cat=538446",
+            "start": {
+                "year": 2007,
+                "month": 2,
+                "day": 19
+            },
+            "end": {
+                "year": 2010,
+                "month": 3,
+                "day": 7
+            }
+        },
+        {
+            "url": "http://walmartstores.com/9243.aspx",
+            "start": {
+                "year": 2010,
+                "month": 4,
+                "day": 24
+            },
+            "end": {
+                "year": 2010,
+                "month": 10,
+                "day": 2
+            }
+        },
+        {
+            "url": "http://www.walmartstores.com/PrivacySecurity/9243.aspx",
+            "start": {
+                "year": 2010,
+                "month": 5,
+                "day": 20
+            },
+            "end": {
+                "year": 2012,
+                "month": 8,
+                "day": 4
+            }
+        },
+        {
+            "url": "http://corporate.walmart.com/privacy-security/walmart-privacy-policy",
+            "start": {
+                "year": 2012,
+                "month": 9,
+                "day": 2
+            }
+        }
+    ]
+}
