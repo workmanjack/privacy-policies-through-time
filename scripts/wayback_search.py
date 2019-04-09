@@ -33,6 +33,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'(\d+-\d+-\d+) privacy policy'),
     re.compile(r'effective as of (\w+ \d+, \d+)'),
     re.compile(r'last modified on (\w+ \d+, \d+)'),
+    re.compile(r'Effective Date: (\w+ \d+\w+ \d+)'),
     re.compile(r'Effective Date: (\w+ \d+, \d+)'),
     re.compile(r'Last Updated: *(\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last Updated: *(\d+ \w+ \d+)', flags=re.IGNORECASE),
@@ -47,8 +48,8 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Last update:? (.*)\n'),
     re.compile(r'LAST UPDATED (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
-    re.compile(r'Effective:? (.*)\n'),
-    re.compile(r'Effective: (\w+ \d+, \d+)')
+    re.compile(r'Effective:? (.*)\n', flags=re.IGNORECASE),
+    re.compile(r'Effective: (\w+ \d+, \d+)', flags=re.IGNORECASE)
 ]
 
 

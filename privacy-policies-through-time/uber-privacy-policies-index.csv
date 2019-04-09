@@ -1,0 +1,8 @@
+company,policy_date,policy_url,policy_path
+uber,2010-09-16 00:00:00,http://web.archive.org/web/20110313133930/http://www.uber.com:80/privacy,uber/uber-2010-09-16.txt
+uber,2012-03-01 00:00:00,http://web.archive.org/web/20120522054938/https://www.uber.com/legal/privacy,uber/uber-2012-03-01.txt
+uber,2013-07-13 00:00:00,http://web.archive.org/web/20140122053622/https://www.uber.com/legal/privacy,uber/uber-2013-07-13.txt
+uber,2013-07-13 00:00:00,http://web.archive.org/web/20140820063129/https://www.uber.com/legal/usa/privacy,uber/uber-2013-07-13.txt
+uber,2015-07-15 00:00:00,http://web.archive.org/web/20150818193825/https://www.uber.com/legal/privacy/users/en,uber/uber-2015-07-15.txt
+uber,2017-11-01 00:00:00,http://web.archive.org/web/20171004012759/https://privacy.uber.com/policy,uber/uber-2017-11-01.txt
+uber,2018-05-25 00:00:00,http://web.archive.org/web/20180531220652/https://privacy.uber.com/policy,uber/uber-2018-05-25.txt

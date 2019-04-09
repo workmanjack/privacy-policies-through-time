@@ -1,0 +1,65 @@
+{
+    "company": "uber",
+    "configs": [
+        {
+            "url": "http://www.uber.com/privacy",
+            "start": {
+                "year": 2011,
+                "month": 3,
+                "day": 13
+            },
+            "end": {
+                "year": 2012,
+                "month": 1,
+                "day": 15
+            }
+        },
+        {
+            "url": "https://www.uber.com/legal/privacy",
+            "start": {
+                "year": 2012,
+                "month": 5,
+                "day": 22
+            },
+            "end": {
+                "year": 2014,
+                "month": 4,
+                "day": 6
+            }
+        },
+        {
+            "url": "https://www.uber.com/legal/usa/privacy",
+            "start": {
+                "year": 2014,
+                "month": 8,
+                "day": 20
+            },
+            "end": {
+                "year": 2015,
+                "month": 7,
+                "day": 4
+            }
+        },
+        {
+            "url": "https://www.uber.com/legal/privacy/users/en",
+            "start": {
+                "year": 2015,
+                "month": 9,
+                "day": 5
+            },
+            "end": {
+                "year": 2017,
+                "month": 9,
+                "day": 8
+            }
+        },
+        {
+            "url": "https://privacy.uber.com/policy",
+            "start": {
+                "year": 2017,
+                "month": 10,
+                "day": 11
+            }
+        }
+    ]
+}
