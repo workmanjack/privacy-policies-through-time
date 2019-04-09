@@ -1,0 +1,19 @@
+company,policy_date,policy_url,policy_path
+apple,2000-10-31 00:00:00,http://web.archive.org/web/20001109193900/http://www.apple.com:80/legal/privacy/,apple/apple-2000-10-31.txt
+apple,2001-05-04 00:00:00,http://web.archive.org/web/20010505103047/http://www.apple.com:80/legal/privacy/,apple/apple-2001-05-04.txt
+apple,2001-06-04 00:00:00,http://web.archive.org/web/20010605001045/http://www.apple.com:80/legal/privacy/,apple/apple-2001-06-04.txt
+apple,2001-06-04 00:00:00,http://web.archive.org/web/20020802121659/http://www.apple.com:80/legal/privacy/,apple/apple-2001-06-04.txt
+apple,2004-12-23 00:00:00,http://web.archive.org/web/20050131040808/http://www.apple.com:80/legal/privacy/,apple/apple-2004-12-23.txt
+apple,2007-06-29 00:00:00,http://web.archive.org/web/20070630044333/http://www.apple.com/legal/privacy/,apple/apple-2007-06-29.txt
+apple,2007-06-29 00:00:00,http://web.archive.org/web/20090830024021/http://www.apple.com:80/legal/privacy/,apple/apple-2007-06-29.txt
+apple,2010-06-21 00:00:00,http://web.archive.org/web/20100818161235/http://www.apple.com:80/privacy/,apple/apple-2010-06-21.txt
+apple,2011-10-21 00:00:00,http://web.archive.org/web/20111022000944/http://www.apple.com/privacy/,apple/apple-2011-10-21.txt
+apple,2012-05-21 00:00:00,http://web.archive.org/web/20120529224248/http://www.apple.com//privacy//,apple/apple-2012-05-21.txt
+apple,2014-03-01 00:00:00,http://web.archive.org/web/20140830142948/http://www.apple.com/legal/privacy/en-ww/,apple/apple-2014-03-01.txt
+apple,2014-09-17 00:00:00,http://web.archive.org/web/20140924131859/http://www.apple.com/legal/privacy/en-ww/,apple/apple-2014-09-17.txt
+apple,2016-05-31 00:00:00,http://web.archive.org/web/20160602073409/http://www.apple.com/legal/privacy/en-ww/,apple/apple-2016-05-31.txt
+apple,2016-09-12 00:00:00,http://web.archive.org/web/20160930114658/http://www.apple.com/legal/privacy/en-ww/,apple/apple-2016-09-12.txt
+apple,2017-09-19 00:00:00,http://web.archive.org/web/20170929025136/https://www.apple.com/legal/privacy/en-ww/,apple/apple-2017-09-19.txt
+apple,2017-12-13 00:00:00,http://web.archive.org/web/20180104184718/https://www.apple.com/legal/privacy/en-ww/,apple/apple-2017-12-13.txt
+apple,2018-01-19 00:00:00,http://web.archive.org/web/20180129230314/https://www.apple.com/legal/privacy/en-ww/,apple/apple-2018-01-19.txt
+apple,2018-05-22 00:00:00,http://web.archive.org/web/20180606094136/https://www.apple.com/legal/privacy/en-ww/,apple/apple-2018-05-22.txt

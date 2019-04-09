@@ -1,0 +1,65 @@
+{
+    "company": "apple",
+    "configs": [
+        {
+            "url": "http://www.apple.com/legal/privacy/",
+            "start": {
+                "year": 2000,
+                "month": 11,
+                "day": 9
+            },
+            "end": {
+                "year": 2002,
+                "month": 6,
+                "day": 4
+            }
+        },
+        {
+            "url": "http://www.apple.com:80/legal/privacy/",
+            "start": {
+                "year": 2002,
+                "month": 8,
+                "day": 2
+            },
+            "end": {
+                "year": 2009,
+                "month": 8,
+                "day": 4
+            }
+        },
+        {
+            "url": "http://www.apple.com/legal/privacy/",
+            "start": {
+                "year": 2009,
+                "month": 9,
+                "day": 27
+            },
+            "end": {
+                "year": 2010,
+                "month": 8,
+                "day": 9
+            }
+        },
+        {
+            "url": "http://www.apple.com/privacy/",
+            "start": {
+                "year": 2010,
+                "month": 8,
+                "day": 18
+            },
+            "end": {
+                "year": 2013,
+                "month": 8,
+                "day": 28
+            }
+        },
+        {
+            "url": "http://www.apple.com/legal/privacy/en-ww/",
+            "start": {
+                "year": 2014,
+                "month": 9,
+                "day": 14
+            }
+        }
+    ]
+}
