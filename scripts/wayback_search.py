@@ -27,6 +27,7 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'Last Revised: (\w+ \d+, \d+)'),
     re.compile(r'posted as of:? (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last modified: (\w+ \d+, \d+)'),
     re.compile(r'(\d+-\d+-\d+) privacy policy'),
@@ -40,6 +41,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Revised ([^\.]*)'),
     re.compile(r'last updated in ([^\.]*)'),
     re.compile(r'last updated on (.*) \('),
+    re.compile(r'last updated on (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'last updated on ([^\.]*)', flags=re.IGNORECASE),
     re.compile(r'Privacy Policy dated (.*)\n'),
     re.compile(r'Last update:? (.*)\n'),
@@ -287,7 +289,8 @@ def main():
             row = [policy_date, link, policy_path]
             rows.append(row)
 
-    else:
+    configs = config.get('configs', None)
+    if configs:
 
         for cfg in config['configs']:
 

@@ -1,0 +1,57 @@
+
+{
+    "company": "oracle",
+    "links": [
+        "http://www.oracle.com/us/legal/privacy/previous-privacy-policy-078836.html",
+        "http://www.oracle.com/us/legal/privacy/privacy-policy-078584.html"
+    ],
+    "configs": [
+        {
+            "url": "http://oracle.com/html/index.html?privacy.html",
+            "start": {
+                "year": 2002,
+                "month": 6,
+                "day": 4
+            },
+            "end": {
+                "year": 2008,
+                "month": 5,
+                "day": 2
+            }
+        },
+        {
+            "url": "http://www.oracle.com/us/legal/privacy/index.html",
+            "start": {
+                "year": 2014,
+                "month": 2,
+                "day": 9
+            },
+            "end": {
+                "year": 2014,
+                "month": 2,
+                "day": 9
+            }
+        },
+        {
+            "url": "http://www.oracle.com/us/legal/privacy/privacy-policy/index.html",
+            "start": {
+                "year": 2014,
+                "month": 2,
+                "day": 9
+            },
+            "end": {
+                "year": 2016,
+                "month": 8,
+                "day": 16
+            }
+        },
+        {
+            "url": "https://www.oracle.com/legal/privacy/privacy-policy.html",
+            "start": {
+                "year": 2016,
+                "month": 8,
+                "day": 16
+            }
+        }
+    ]
+}
