@@ -27,6 +27,7 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'posted as of:? (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last modified: (\w+ \d+, \d+)'),
     re.compile(r'(\d+-\d+-\d+) privacy policy'),
     re.compile(r'effective as of (\w+ \d+, \d+)'),
@@ -41,7 +42,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'last updated on (.*) \('),
     re.compile(r'last updated on ([^\.]*)', flags=re.IGNORECASE),
     re.compile(r'Privacy Policy dated (.*)\n'),
-    re.compile(r'Last update (.*)\n'),
+    re.compile(r'Last update:? (.*)\n'),
     re.compile(r'LAST UPDATED (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Effective: (.*)\n'),

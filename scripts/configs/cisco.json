@@ -1,0 +1,65 @@
+{
+    "company": "cisco",
+    "configs": [
+        {
+            "url": "http://www.cisco.com/public/privacy.html",
+            "start": {
+                "year": 2001,
+                "month": 12,
+                "day": 4
+            },
+            "end": {
+                "year": 2002,
+                "month": 12,
+                "day": 13
+            }
+        },
+        {
+            "url": "http://www.cisco.com:80/en/US/swassets/sw293/privacy_statement.html",
+            "start": {
+                "year": 2002,
+                "month": 12,
+                "day": 13
+            },
+            "end": {
+                "year": 2007,
+                "month": 2,
+                "day": 27
+            }
+        },
+        {
+            "url": "http://www.cisco.com/web/siteassets/legal/privacy.html",
+            "start": {
+                "year": 2007,
+                "month": 5,
+                "day": 14
+            },
+            "end": {
+                "year": 2011,
+                "month": 11,
+                "day": 4
+            }
+        },
+        {
+            "url": "http://www.cisco.com/web/siteassets/legal/privacy_full.html",
+            "start": {
+                "year": 2011,
+                "month": 11,
+                "day": 4
+            },
+            "end": {
+                "year": 2017,
+                "month": 3,
+                "day": 26
+            }
+        },
+        {
+            "url": "http://www.cisco.com:80/c/en/us/about/legal/privacy-full.html",
+            "start": {
+                "year": 2017,
+                "month": 3,
+                "day": 26
+            }
+        }
+    ]
+}
