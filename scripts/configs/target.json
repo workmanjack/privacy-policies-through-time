@@ -1,0 +1,44 @@
+{
+    "company": "target",
+    "configs": [
+        {
+            "url": "http://sites.target.com/site/en/spot/page.jsp?title=privacy_policy",
+            "start": {
+                "year": 2006,
+                "month": 5,
+                "day": 8
+            },
+            "end": {
+                "year": 2012,
+                "month": 8,
+                "day": 29
+            }
+        },
+        {
+            "url": "http://www.target.com/spot/privacy-policy",
+            "start": {
+                "year": 2012,
+                "month": 10,
+                "day": 2
+            },
+            "end": {
+                "year": 2016,
+                "month": 6,
+                "day": 9
+            }
+        },
+        {
+            "url": "http://www.target.com/c/target-privacy-policy/-/N-4sr7p",
+            "start": {
+                "year": 2017,
+                "month": 1,
+                "day": 26
+            },
+            "end": {
+                "year": 2018,
+                "month": 11,
+                "day": 1
+            }
+        }
+    ]
+}
