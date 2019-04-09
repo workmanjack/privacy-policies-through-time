@@ -1,8 +1,8 @@
 company,policy_date,policy_url,policy_path
 google,1999-06-09 00:00:00,https://policies.google.com/privacy/archive/19990609?hl=en-US,google/google-1999-06-09.txt
-google,1999-09-20 00:00:00,https://policies.google.com/privacy/archive/19990920?hl=en-US,linked_check_date.txt
-google,2001-01-04 00:00:00,https://policies.google.com/privacy/archive/20010104?hl=en-US,linked_check_date.txt
-google,2004-07-01 00:00:00,https://policies.google.com/privacy/archive/20040701?hl=en-US,linked_check_date.txt
+google,1999-09-20 00:00:00,https://policies.google.com/privacy/archive/19990920?hl=en-US,../privacy-policies-through-time/google/google-1999-09-20.txt
+google,2001-01-04 00:00:00,https://policies.google.com/privacy/archive/20010104?hl=en-US,../privacy-policies-through-time/google/google-2001-01-04.txt
+google,2004-07-01 00:00:00,https://policies.google.com/privacy/archive/20040701?hl=en-US,../privacy-policies-through-time/google/google-2004-07-01.txt
 google,2005-10-14 00:00:00,https://policies.google.com/privacy/archive/20051014?hl=en-US,google/google-2005-10-14.txt
 google,2008-08-07 00:00:00,https://policies.google.com/privacy/archive/20080807?hl=en-US,google/google-2008-08-07.txt
 google,2009-01-27 00:00:00,https://policies.google.com/privacy/archive/20090127?hl=en-US,google/google-2009-01-27.txt
@@ -27,5 +27,5 @@ google,2017-03-01 00:00:00,https://policies.google.com/privacy/archive/20170301?
 google,2017-04-17 00:00:00,https://policies.google.com/privacy/archive/20170417?hl=en-US,google/google-2017-04-17.txt
 google,2017-10-02 00:00:00,https://policies.google.com/privacy/archive/20171002?hl=en-US,google/google-2017-10-02.txt
 google,2017-12-18 00:00:00,https://policies.google.com/privacy/archive/20171218?hl=en-US,google/google-2017-12-18.txt
-google,2018-05-25 00:00:00,https://policies.google.com/privacy/archive/20180525?hl=en-US,linked_check_date.txt
+google,2018-05-25 00:00:00,https://policies.google.com/privacy/archive/20180525?hl=en-US,../privacy-policies-through-time/google/google-2018-05-25.txt
 google,2019-01-22 00:00:00,https://policies.google.com/privacy?hl=en-US,google/google-2019-01-22.txt

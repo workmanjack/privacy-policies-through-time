@@ -45,6 +45,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Revised: (\w+ \d+, \d+)'),
     re.compile(r'Revised ([^\.]*)'),
     re.compile(r'last updated in ([^\.]*)'),
+    re.compile(r'last updated on (\w+ \d+, \d+)'),
     re.compile(r'last updated on (.*) \('),
     re.compile(r'updated on\n? ?(\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'updated on ([^\.]*)', flags=re.IGNORECASE),
@@ -293,6 +294,7 @@ def main():
                         print('Found date in config: {}'.format(policy_date))
                         out_path, out = make_policy_file_name(company, policy_date)
                         move(policy_path, out_path)
+                        policy_path = out_path
                         print('Moved _check_date to {}'.format(out_path))
             row = [company, policy_date, link, policy_path]
             rows.append(row)

@@ -4,7 +4,7 @@ from wayback_search import get_update_date, REGEX_POLICY_DATE_LIST
 
 
 #with open('20110902041958_check_date.txt', 'r') as f:
-with open('20091001221035_check_date.txt', 'r') as f:
+with open('linked_check_date.txt', 'r', encoding='utf-8') as f:
     page = f.read()
 
 # This policy was last updated on July 21, 2011 ("Effective Date").
