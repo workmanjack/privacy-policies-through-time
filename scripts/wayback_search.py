@@ -1,4 +1,5 @@
 from datetime import date, timedelta, datetime
+import urllib.parse
 import dateparser
 import requests
 import argparse
@@ -192,6 +193,7 @@ def read_config_file(path):
 
 def go_wayback(url, timestamp):
 
+    url = urllib.parse.quote(url)
     request_url = 'http://archive.org/wayback/available?url={}&timestamp={}'.format(url, timestamp)
     data = api_query(request_url)
     update_date = None
@@ -254,6 +256,7 @@ def parse_args():
     # parse args
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--config', action='store', type=str, required=True, help='Company config file for searching')
+    parser.add_argument('-a', '--abort', action='store_true', required=False, help='Aborts config if cannot find date')
     args = parser.parse_args()
 
     # arg sanity check
@@ -350,7 +353,7 @@ def main():
                     row.append(archive_url)
                     row.append(policy_path)
                     rows.append(row)
-                elif policy_path and '_check_date' in policy_path:
+                elif args.abort and policy_path and '_check_date' in policy_path:
                     # we couldn't detect the date... abort
                     break
 
