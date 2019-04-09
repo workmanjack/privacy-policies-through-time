@@ -1,0 +1,39 @@
+{
+    "company": "pinterest",
+    "configs": [
+        {
+            "url": "http://pinterest.com/about/privacy/",
+            "start": {
+                "year": 2011,
+                "month": 5,
+                "day": 31
+            },
+            "end": {
+                "year": 2013,
+                "month": 2,
+                "day": 27
+            }
+        },
+        {
+            "url": "https://about.pinterest.com/en/privacy-policy",
+            "start": {
+                "year": 2017,
+                "month": 2,
+                "day": 8
+            },
+            "end": {
+                "year": 2017,
+                "month": 5,
+                "day": 15
+            }
+        },
+        {
+            "url": "https://policy.pinterest.com/en/privacy-policy",
+            "start": {
+                "year": 2017,
+                "month": 5,
+                "day": 15
+            }
+        }
+    ]
+}
