@@ -29,6 +29,9 @@ REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'amended as of (\w+ \d+)', flags=re.IGNORECASE),
+    re.compile(r'amended as of (\w+\.* \d+, \d+)', flags=re.IGNORECASE),
+    re.compile(r'Published:* (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last update: (\d+/\d+/\d+)', flags=re.IGNORECASE),
     re.compile(r'Last Revision: (\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Last Revised: (\w+ \d+, \d+)'),
@@ -45,7 +48,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Revised: (\w+ \d+, \d+)'),
     re.compile(r'Revised ([^\.]*)'),
     re.compile(r'last updated in ([^\.]*)'),
-    re.compile(r'last updated on (\w+ \d+, \d+)'),
+    re.compile(r'last updated on (\w+ \d+\w*, \d+)', flags=re.IGNORECASE),
     re.compile(r'last updated on (.*) \('),
     re.compile(r'updated on\n? ?(\w+ \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'updated on ([^\.]*)', flags=re.IGNORECASE),

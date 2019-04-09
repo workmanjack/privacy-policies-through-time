@@ -1,0 +1,39 @@
+{
+    "company": "nytimes",
+    "configs": [
+        {
+            "url": "http://www.nytimes.com:80/ref/membercenter/help/privacy.html",
+            "start": {
+                "year": 2002,
+                "month": 9,
+                "day": 2
+            },
+            "end": {
+                "year": 2010,
+                "month": 12,
+                "day": 11
+            }
+        },
+        {
+            "url": "http://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html",
+            "start": {
+                "year": 2011,
+                "month": 2,
+                "day": 28
+            },
+            "end": {
+                "year": 2018,
+                "month": 1,
+                "day": 1
+            }
+        },
+        {
+            "url": "https://help.nytimes.com/hc/en-us/articles/115014892108-Privacy-policy",
+            "start": {
+                "year": 2018,
+                "month": 2,
+                "day": 1
+            }
+        }
+    ]
+}
