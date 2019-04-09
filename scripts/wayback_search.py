@@ -294,7 +294,7 @@ def main():
                         print('Found date in config: {}'.format(policy_date))
                         out_path, out = make_policy_file_name(company, policy_date)
                         move(policy_path, out_path)
-                        policy_path = out_path
+                        policy_path = out
                         print('Moved _check_date to {}'.format(out_path))
             row = [company, policy_date, link, policy_path]
             rows.append(row)

@@ -95,9 +95,9 @@ fitbit,2018-04-23 00:00:00,http://web.archive.org/web/20180508005637/https://www
 fitbit,2018-09-18 00:00:00,http://web.archive.org/web/20181004214736/https://www.fitbit.com/legal/privacy-policy,fitbit/fitbit-2018-09-18.txt
 goodreads,2008-12-29 00:00:00,http://web.archive.org/web/20100225091847/http://www.goodreads.com:80/about/privacy,goodreads/goodreads-2008-12-29.txt
 google,1999-06-09 00:00:00,https://policies.google.com/privacy/archive/19990609?hl=en-US,google/google-1999-06-09.txt
-google,1999-09-20 00:00:00,https://policies.google.com/privacy/archive/19990920?hl=en-US,../privacy-policies-through-time/google/google-1999-09-20.txt
-google,2001-01-04 00:00:00,https://policies.google.com/privacy/archive/20010104?hl=en-US,../privacy-policies-through-time/google/google-2001-01-04.txt
-google,2004-07-01 00:00:00,https://policies.google.com/privacy/archive/20040701?hl=en-US,../privacy-policies-through-time/google/google-2004-07-01.txt
+google,1999-09-20 00:00:00,https://policies.google.com/privacy/archive/19990920?hl=en-US,google/google-1999-09-20.txt
+google,2001-01-04 00:00:00,https://policies.google.com/privacy/archive/20010104?hl=en-US,google/google-2001-01-04.txt
+google,2004-07-01 00:00:00,https://policies.google.com/privacy/archive/20040701?hl=en-US,google/google-2004-07-01.txt
 google,2005-10-14 00:00:00,https://policies.google.com/privacy/archive/20051014?hl=en-US,google/google-2005-10-14.txt
 google,2008-08-07 00:00:00,https://policies.google.com/privacy/archive/20080807?hl=en-US,google/google-2008-08-07.txt
 google,2009-01-27 00:00:00,https://policies.google.com/privacy/archive/20090127?hl=en-US,google/google-2009-01-27.txt
@@ -122,7 +122,7 @@ google,2017-03-01 00:00:00,https://policies.google.com/privacy/archive/20170301?
 google,2017-04-17 00:00:00,https://policies.google.com/privacy/archive/20170417?hl=en-US,google/google-2017-04-17.txt
 google,2017-10-02 00:00:00,https://policies.google.com/privacy/archive/20171002?hl=en-US,google/google-2017-10-02.txt
 google,2017-12-18 00:00:00,https://policies.google.com/privacy/archive/20171218?hl=en-US,google/google-2017-12-18.txt
-google,2018-05-25 00:00:00,https://policies.google.com/privacy/archive/20180525?hl=en-US,../privacy-policies-through-time/google/google-2018-05-25.txt
+google,2018-05-25 00:00:00,https://policies.google.com/privacy/archive/20180525?hl=en-US,google/google-2018-05-25.txt
 google,2019-01-22 00:00:00,https://policies.google.com/privacy?hl=en-US,google/google-2019-01-22.txt
 intuit,2007-08-22 00:00:00,http://web.archive.org/web/20080930005550/http://about.intuit.com:80/privacy/,intuit/intuit-2007-08-22.txt
 intuit,2009-09-14 00:00:00,http://web.archive.org/web/20100618202954/http://smallbusiness.intuit.com:80/small-business/privacy/index.jsp,intuit/intuit-2009-09-14.txt
@@ -211,7 +211,7 @@ twitter,2012-05-17 00:00:00,https://twitter.com/en/privacy/previous/version_6,tw
 twitter,2013-07-03 00:00:00,https://twitter.com/en/privacy/previous/version_7,twitter/twitter-2013-07-03.txt
 twitter,2013-10-21 00:00:00,https://twitter.com/en/privacy/previous/version_8,twitter/twitter-2013-10-21.txt
 twitter,2014-09-08 00:00:00,https://twitter.com/en/privacy/previous/version_9,twitter/twitter-2014-09-08.txt
-twitter,2015-05-18 00:00:00,https://twitter.com/en/privacy/previous/version_10,../privacy-policies-through-time/twitter/twitter-2015-05-18.txt
+twitter,2015-05-18 00:00:00,https://twitter.com/en/privacy/previous/version_10,twitter/twitter-2015-05-18.txt
 twitter,2016-01-27 00:00:00,https://twitter.com/en/privacy/previous/version_11,twitter/twitter-2016-01-27.txt
 twitter,2016-09-30 00:00:00,https://twitter.com/en/privacy/previous/version_12,twitter/twitter-2016-09-30.txt
 twitter,2017-06-18 00:00:00,https://twitter.com/en/privacy/previous/version_13,twitter/twitter-2017-06-18.txt
