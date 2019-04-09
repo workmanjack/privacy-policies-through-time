@@ -1,4 +1,10 @@
-linkedin,2006-02-16 00:00:00,http://web.archive.org/web/20060324051246/https://www.linkedin.com/static?key=privacy_policy,linkedin/linkedin-2006-02-16.txt
-linkedin,2006-03-01 00:00:00,http://web.archive.org/web/20060504163124/http://www.linkedin.com:80/static?key=privacy_policy,linkedin/linkedin-2006-03-01.txt
-linkedin,2006-07-14 00:00:00,http://web.archive.org/web/20060809104958/http://www.linkedin.com:80/static?key=privacy_policy,linkedin/linkedin-2006-07-14.txt
-linkedin,2014-10-23 00:00:00,http://web.archive.org/web/20150402174859/https://www.linkedin.com/legal/privacy-policy/,linkedin/linkedin-2014-10-23.txt
+company,policy_date,policy_url,policy_path
+linkedin,2006-02-16 00:00:00,http://web.archive.org/web/20060324051246/https://www.linkedin.com/static?key=privacy_policy,linkedin/linkedin-2006-02-16.txt
+linkedin,2006-03-01 00:00:00,http://web.archive.org/web/20060504163124/http://www.linkedin.com:80/static?key=privacy_policy,linkedin/linkedin-2006-03-01.txt
+linkedin,2006-07-14 00:00:00,http://web.archive.org/web/20060809104958/http://www.linkedin.com:80/static?key=privacy_policy,linkedin/linkedin-2006-07-14.txt
+linkedin,2008-10-28 00:00:00,http://web.archive.org/web/20081103005914/http://www.linkedin.com:80/static?key=privacy_policy,linkedin/linkedin-2008-10-28.txt
+linkedin,2008-11-14 00:00:00,http://web.archive.org/web/20081202152015/http://www.linkedin.com:80/static?key=privacy_policy,linkedin/linkedin-2008-11-14.txt
+linkedin,2009-01-22 00:00:00,http://web.archive.org/web/20091111235159/http://www.linkedin.com/static?key=privacy_policy,linkedin/linkedin-2009-01-22.txt
+linkedin,2010-03-24 00:00:00,http://web.archive.org/web/20100522002626/http://www.linkedin.com/static?key=privacy_policy,linkedin/linkedin-2010-03-24.txt
+linkedin,2011-06-16 00:00:00,http://web.archive.org/web/20110706230353/http://www.linkedin.com/static?key=privacy_policy,linkedin/linkedin-2011-06-16.txt
+linkedin,2014-10-23 00:00:00,http://web.archive.org/web/20150402174859/https://www.linkedin.com/legal/privacy-policy/,linkedin/linkedin-2014-10-23.txt

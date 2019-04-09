@@ -3,15 +3,24 @@
     "configs": [
         {
             "url": "http://www.fitbit.com/privacy",
-            "year": 2009,
-            "month": 10,
-            "day": 4
+            "start": {
+                "year": 2009,
+                "month": 10,
+                "day": 4
+            },
+            "end": {
+                "year": 2015,
+                "month": 11,
+                "day": 1
+            }
         },
         {
             "url": "http://www.fitbit.com/legal/privacy-policy",
-            "year": 2015,
-            "month": 11,
-            "day": 1
+            "start": {
+                "year": 2015,
+                "month": 11,
+                "day": 1
+            }
         }
     ]
 }

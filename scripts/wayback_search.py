@@ -224,7 +224,7 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
 
     resp = requests.get(url=archive_url)
     if resp.status_code != 200:
-        print('failed to retrieve data from {0}'.format(url))
+        print('failed to retrieve data from {0}'.format(archive_url))
     else:
         page = resp.text
 
@@ -237,7 +237,7 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
 
         # check dates
         if update_date and last_date and update_date == last_date:
-            print('{} no change'.format(archive_timestamp))
+            print('{} ({}) no change'.format(archive_timestamp, update_date))
         else:
             last_date = update_date
             if update_date:
@@ -342,7 +342,7 @@ def main():
 
                 if date_url:
                     # some websites have the update date on a different page than the privacy policy, we handle that here
-                    _, _, policy_date, _ = process_policy(company, date_url, timestamp, snapshots, last_date, write=True)
+                    policy_date, _ = process_policy(company, date_url, archive_timestamp, last_date, write=True)
 
                 if not policy_date:
                     print('Check date (timestamp={}, archive={})'.format(timestamp, archive_timestamp))

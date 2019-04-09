@@ -1,0 +1,132 @@
+
+<!--&nbsp;-->
+&nbsp;
+Examples of How We Use Your
+Information in our Business
+We use the information you enter into our products and services to produce results you ask for, like tax return filings, payroll processing, budget graphs, reports on how you spend your money, etc.
+We use your contact information to deliver items you bought from us or to send you information about your account or a problem with a product or service.
+We use your billing information to process your payments.
+We use information about products and services you have used to ask you to participate in surveys and research and to send you information about other products that may be useful to you.
+We use information about your visits to our websites to recognize you when you visit.
+In combination with information from many customers, we look to see what web pages are most effective or to find and fix problems. We use similar information in our products and services to see what users do and to find and fix problems. And we may share reports that combine the information from many users.
+We use information to find and prevent fraud.
+&nbsp;
+Privacy at Intuit
+Data Stewardship
+Intuit Services
+Online Services
+Mobile Services
+On Your Computer
+For Individuals
+For Businesses
+&nbsp;
+Online Security Center Home &gt; Privacy at Intuit
+Intuit Privacy Highlights
+We will not, without your permission, sell,
+publish or share information you entrust to us
+that identifies you or any person.
+This statement applies to our business operations in the United States.
+Outside of the US? View your privacy statement:
+Canada (EN):
+http://www.intuit.ca/about-intuit-canada/info/privacy-policy.jsp
+Canada (FR):
+http://www.intuit.ca/a-propos-de-intuit/info/vie-privee.jsp
+France: 
+http://www.intuit.fr/apropos-intuit/confidentialite.jsp
+UK:
+http://www.intuit.co.uk/about/privacy.jsp
+Other Countries (Global):
+http://global.intuit.com/about/privacy.jsp.
+What Type of Information We Collect
+Personal information such as your name, shipping/billing address,
+e-mail, phone, and credit card number when you interact with us
+for sales, service, support, registration, and payment.
+Your username and password to allow access to our products and services.
+Customer data or customer company data which you store and use with us.
+Information about your system as it interacts with us such as your IP address and browser information.
+User feedback, community discussions, chats and other interactions at our sites.
+What We Do With Your Information
+As a steward of your information, we will:
+Use your information to operate our business&nbsp; and to help us improve your experience with our products.
+<!-- show
+hide-->
+Examples of How We Use Your
+Information in our Business
+We use the information you enter into our products and services to produce results you ask for, like tax return filings, payroll processing, budget graphs, reports on how you spend your money, etc.
+We use your contact information to deliver items you bought from us or to send you information about your account or a problem with a product or service.
+We use your billing information to process your payments.
+We use information about products and services you have used to ask you to participate in surveys and research and to send you information about other products that may be useful to you.
+We use information about your visits to our websites to recognize you when you visit.
+In combination with information from many customers, we look to see what web pages are most effective or to find and fix problems. We use similar information in our products and services to see what users do and to find and fix problems. And we may share reports that combine the information from many users.
+We use information to find and prevent fraud.
+Use your information to operate our business&nbsp; and to help us improve your experience with our products.
+Tell you about the products and services that are available to you.
+Give you choices about our use of information that identifies you.
+Give open and clear explanations about how we use information.
+Publish or share combined information from many users, but only in a way that would not allow you or any person to be identified. For an example, see this from Intuit Payroll at http://payroll.intuit.com/employment_index/.
+Train our employees about how to keep information safe and secure, and educate you about how to keep your information safe and secure.
+Learn more about Data Stewardship at Intuit.
+Security of your Information
+We use accepted best methods to protect your information. We review our security procedures carefully.
+We comply with applicable laws and security standards.
+Your sensitive information, such as credit card information, is sent securely.
+Our staff is trained and required to safeguard your information.
+We transmit, store, protect and access all cardholder information in compliance with the Payment Card Industry's Data Security Standards.
+More details on protecting your information can be found on the Intuit Security website.
+This Web site is privacy certified by TRUSTe Privacy Seal
+Intuit has been awarded TRUSTe's Privacy Seal signifying that
+this privacy policy and practices have been reviewed by TRUSTe for
+compliance with TRUSTe's program
+requirements including transparency, accountability and choice
+regarding the collection and use of your personal information. The
+TRUSTe program does not cover information that may be collected
+through downloadable software. TRUSTe's mission, as an independent
+third party, is to accelerate online trust among consumers and
+organizations globally through its leading privacy trustmark and
+innovative trust solutions. If you have questions or complaints
+regarding our privacy policy or practices, please contact us at
+Privacy Team, Intuit, Inc. 2800 E Commerce Center Place, Tucson,
+AZ 85706. If you are not satisfied with our response you can
+contact TRUSTe
+here.
+&nbsp;
+The following Intuit businesses and processes comply with the
+U.S.-EU Safe Harbor Framework and the U.S.-Swiss Safe Harbor Framework
+as set forth by the U.S. Department of Commerce regarding the
+collection, use, and retention of personal information from European
+Union member countries and Switzerland: QuickBooks Online Global,
+Intuit Brainstorm, QuickBase, Payments/GoPayments, Customer Central,
+and Intuit Procurement contracting and purchasing. Intuit has
+certified that it adheres to the Safe Harbor Privacy Principles of
+notice, choice, onward transfer, security, data integrity, access, and
+enforcement. To learn more about the Safe Harbor program, and to view
+Intuit's certification, please visit
+http://www.export.gov/safeharbor/.
+Privacy Topics:
+Privacy at Intuit
+Data Stewardship
+Intuit Services
+Online Services
+Mobile Services
+On Your Computer
+For Individuals
+For Businesses
+Marketing Preferences
+Modify Your Intuit Marketing
+Preferences&nbsp;
+Contact Us
+Privacy Team
+Intuit Inc.
+2800 East Commerce
+Center Place
+Tucson, AZ 85706
+Contact Online&nbsp;
+&nbsp;
+Support | About&nbsp;Intuit | Careers | Security | Contact&nbsp;Us | International | Intuit&nbsp;Labs | Privacy | Legal | &copy;&nbsp;2011&nbsp;Intuit&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.
+Effective Date: July 1, 2013
+Clarified description of data use when synchronized from desktop applications.
+If we make material changes to any of our privacy policies or
+practices regarding personal information we will update our statement
+and post a notice on our site 30 days before the changes take effect.
+A version of this statement suitable for printing is available at
+http://security.intuit.com/privacy/highlights07012013.pdf.
