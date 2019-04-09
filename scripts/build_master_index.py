@@ -15,7 +15,6 @@ def main():
     for index in policy_indices:
         print('processing {}'.format(index))
         df = pd.read_csv(index)
-        print(df.columns)
         if first:
             master = df
             first = False
