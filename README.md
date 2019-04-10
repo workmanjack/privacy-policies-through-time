@@ -1,4 +1,38 @@
-# privacy-policies-through-time
+# Privacy Policies Through Time
+
+A collection of privacy policies organized by company and revision date
+
+## Objective
+
+Studying how privacy policies have evolved over time can tell us about…
+
+1. A company’s approach to privacy
+2. The immediate and lasting impact of legislation
+3. How to best form new legislation
+
+Other privacy policy datasets cover only recent policies and do not connect revisions (source: https://usableprivacy.org/data)
+
+## Dataset Metadata
+
+* Number of Privacy Policies: 295
+* Number of Companies: 21
+* Date Range: June 9th, 1999 - January 1st, 2019
+
+## Analyzing Key Privacy Events
+
+We can use this data to review changes over time to privacy policies. Here we show examples of searching by keyword through past policies to observe the impact and effect of deprecating old or enacting new legislation.
+
+For more examples, please view [this notebook](/notebooks/privacy-policies-through-time.ipynb)
+
+### International Safe Harbor Privacy Principles
+
+![safe_harbor_heatmap](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figure/safe-harbor-heatmap.PNG)
+
+### EU-US Privacy Shield
+
+![eu-us-privacy-shield-heatmap](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figure/eu-us-privacy-shield-heatmap.PNG)
+
+## Notes On Policy Collection
 
 Some sites are easier than others
 
