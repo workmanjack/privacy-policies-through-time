@@ -204,7 +204,6 @@ def get_update_date(page, regex_list):
         update_date = None
         if m and len(m.group()) > 1:
             try:
-                print(m.group(1))
                 update_date = dateparser.parse(m.group(1))
                 # print(update_date)
             except RecursionError as exc:
