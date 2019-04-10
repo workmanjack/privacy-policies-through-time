@@ -28,6 +28,27 @@ REGEX_LINK_TAG = re.compile(r'<link.*?>')
 REGEX_SCRIPT_TAG = re.compile(r'\<script.*?\</script\>', flags=re.DOTALL)
 REGEX_STYLE_TAG = re.compile(r'\<style.*?\</style\>', flags=re.DOTALL)
 REGEX_TAGS = re.compile('<[^<]+?>')
+REGEX_POLICY_DATE_MASTER = [
+    re.compile(
+        r'(?:(?:effective)|' +
+        r'(?:update)|' +
+        r'(?:updated)|' +
+        r'(?:amended)|' +
+        r'(?:posted)|' +
+        r'(?:modified)|' +
+        r'(?:revision)|' +
+        r'(?:revised))' +
+        r'\s?(?:date|on|in|as of)?'
+        r'[:]?' +                      # colon or no colon
+        r'[\s\n]*' +                   # Whitespace/newlines between prefix and date
+        r'(' +
+        r'(\w+\.? \d+\w*,? \d+)|' +    # November 3, 2003 | November 3 2003 | Nov. 3 2003 | Nov 3rd, 2003
+        r'(\w+\.?\,? \d+)|' +          # November 2003 | Nov. 2003 | Nov, 2003
+        r'(\d+ \w+\.?\,? \d+)|' +      # 3 November 2003 | 3 Nov. 2003
+        r'(\d+/\d+/\d+)|' +            # 11/3/2003 | 3/11/2003
+        r'(\d+-\d+-\d+)' +             # 11-3-2003 | 3-11-2003
+        r')', flags=re.IGNORECASE)
+]
 REGEX_POLICY_DATE_LIST = [
     re.compile(r'amended as of (\w+ \d+)', flags=re.IGNORECASE),
     re.compile(r'amended as of (\w+\.* \d+, \d+)', flags=re.IGNORECASE),
@@ -58,7 +79,6 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'LAST UPDATED (\w+,? \d+)', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Effective:? (.*)\n', flags=re.IGNORECASE),
-    re.compile(r'Effective:? (\w+ \d+, \d+)', flags=re.IGNORECASE),
 ]
 
 
@@ -181,7 +201,7 @@ def get_update_date(page, regex_list):
         update_date = None
         if m and len(m.group()) > 1:
             try:
-                # print(m.group(1))
+                print(m.group(1))
                 update_date = dateparser.parse(m.group(1))
                 # print(update_date)
             except RecursionError as exc:
