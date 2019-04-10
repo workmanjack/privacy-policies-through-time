@@ -1,0 +1,52 @@
+{
+    "company": "verizon",
+    "configs": [
+        {
+            "url": "http://www22.verizon.com/privacy/",
+            "start": {
+                "year": 2002,
+                "month": 6,
+                "day": 6
+            },
+            "end": {
+                "year": 2011,
+                "month": 9,
+                "day": 26
+            }
+        },
+        {
+            "url": "http://www.verizon.com:80/about/privacy/",
+            "start": {
+                "year": 2011,
+                "month": 9,
+                "day": 26
+            },
+            "end": {
+                "year": 2014,
+                "month": 10,
+                "day": 8
+            }
+        },
+        {
+            "url": "http://www.verizon.com/about/privacy/",
+            "start": {
+                "year": 2014,
+                "month": 10,
+                "day": 8
+            },
+            "end": {
+                "year": 2015,
+                "month": 11,
+                "day": 12
+            }
+        },
+        {
+            "url": "http://www.verizon.com/about/privacy/full-privacy-policy",
+            "start": {
+                "year": 2016,
+                "month": 4,
+                "day": 9
+            }
+        }
+    ]
+}

@@ -50,6 +50,9 @@ REGEX_POLICY_DATE_MASTER = [
         r')', flags=re.IGNORECASE)
 ]
 REGEX_POLICY_DATE_LIST = [
+    re.compile(r'Privacy Policy\s*(\w+ \d+, \d+)'),
+    re.compile(r'\n(\d+-\d+-\d+)'),
+    re.compile(r'\n(\w+ \d+, \d+)'),
     re.compile(r'amended as of (\w+ \d+)', flags=re.IGNORECASE),
     re.compile(r'amended as of (\w+\.* \d+, \d+)', flags=re.IGNORECASE),
     re.compile(r'Published:* (\w+ \d+, \d+)', flags=re.IGNORECASE),
@@ -76,7 +79,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Privacy Policy dated (.*)\n'),
     re.compile(r'Last update:? (\w+ \d+, \d+)'),
     re.compile(r'LAST UPDATED (\w+ \d+, \d+)', flags=re.IGNORECASE),
-    re.compile(r'LAST UPDATED (\w+,? \d+)', flags=re.IGNORECASE),
+    re.compile(r'UPDATED (\w+,? \d+)', flags=re.IGNORECASE),
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Effective:? (.*)\n', flags=re.IGNORECASE),
 ]
