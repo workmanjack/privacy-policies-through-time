@@ -2,6 +2,8 @@
 
 A collection of privacy policies organized by company and revision date
 
+Begin exploring the dataset via [this notebook](/notebooks/privacy-policies-through-time.ipynb) and the [master-privacy-policies-index.csv](/privacy-policies-through-time/master-privacy-policies-index.csv) index.
+
 ## Objective
 
 Studying how privacy policies have evolved over time can tell us about…
