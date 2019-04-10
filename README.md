@@ -22,15 +22,15 @@ Other privacy policy datasets cover only recent policies and do not connect revi
 
 We can use this data to review changes over time to privacy policies. Here we show examples of searching by keyword through past policies to observe the impact and effect of deprecating old or enacting new legislation.
 
-For more examples, please view [this notebook](/notebooks/privacy-policies-through-time.ipynb)
+For more examples, please view [this notebook](/notebooks/privacy-policies-through-time.ipynb). The heatmaps were generated with python's [seaborn](https://seaborn.pydata.org/).
 
 ### International Safe Harbor Privacy Principles
 
-![safe_harbor_heatmap](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figure/safe-harbor-heatmap.PNG)
+![safe_harbor_heatmap](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/figures/safe-harbor-heatmap.PNG)
 
 ### EU-US Privacy Shield
 
-![eu-us-privacy-shield-heatmap](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figure/eu-us-privacy-shield-heatmap.PNG)
+![eu-us-privacy-shield-heatmap](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/figures/eu-us-privacy-shield-heatmap.PNG)
 
 ## Notes On Policy Collection
 
