@@ -5,6 +5,7 @@ import urllib.parse
 import dateparser
 import requests
 import argparse
+import time
 import json
 import csv
 import re
@@ -41,13 +42,14 @@ REGEX_POLICY_DATE_MASTER = [
         r'(?:revised))' +
         r'\s?(?:date|on|in|as of)?'
         r'[:]?' +                      # colon or no colon
+        r'(?:</span>)|' +              # sometimes prefix is styled with a <span> tag
         r'[\s\n]*' +                   # Whitespace/newlines between prefix and date
         r'(' +
         r'(\w+\.? \d+\w*,? \d+)|' +    # November 3, 2003 | November 3 2003 | Nov. 3 2003 | Nov 3rd, 2003
-        r'(\w+\.?\,? \d+)|' +          # November 2003 | Nov. 2003 | Nov, 2003
         r'(\d+ \w+\.?\,? \d+)|' +      # 3 November 2003 | 3 Nov. 2003
         r'(\d+/\d+/\d+)|' +            # 11/3/2003 | 3/11/2003
         r'(\d+-\d+-\d+)' +             # 11-3-2003 | 3-11-2003
+        r'(\w+\.?\,? \d+)|' +          # November 2003 | Nov. 2003 | Nov, 2003
         r')', flags=re.IGNORECASE)
 ]
 REGEX_POLICY_DATE_MULTIPLE = [
@@ -86,6 +88,7 @@ REGEX_POLICY_DATE_MULTIPLE = [
 ]
 REGEX_POLICY_DATE_LIST = REGEX_POLICY_DATE_MASTER
 
+
 def print_debug(msg):
     if DEBUG:
         print(msg)
@@ -97,6 +100,7 @@ def daterange(start_date, end_date):
     for n in range(int ((end_date - start_date).days)):
         yield start_date + timedelta(n)
 
+        
 # https://stackoverflow.com/questions/5734438/how-to-create-a-month-iterator
 def month_year_iter(start_month, start_year, end_month, end_year):
     ym_start = 12 * start_year + start_month - 1
@@ -204,18 +208,29 @@ def make_policy_comparable(page, policy_bookends, timestamp):
 
 
 def get_update_date(page, regex_list):
+    found = False
     for regex in regex_list:
-        m = regex.search(page)
+        m = regex.findall(page)
         update_date = None
-        if m and len(m.group()) > 1:
-            try:
-                update_date = dateparser.parse(m.group(1))
-                # print(update_date)
-            except RecursionError as exc:
-                print(exc)
-            break
+        if m and len(m) > 0:
+            for matches in m:
+                for submatch in matches:
+                    try:
+                        update_date = dateparser.parse(submatch)
+                        # print(update_date)
+                    except RecursionError as exc:
+                        print(exc)
+                    found = update_date is not None
+                    if found:
+                        print('found date: {}'.format(submatch))
+                        break
+                if found:
+                    break
+            if found:
+                break
     if not update_date:
         print('update date not found!')
+        print('match: {}'.format(m))
     return update_date
 
 
@@ -258,8 +273,13 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
     update_date = None
     out = None
 
+    #start = time.time()
+    #print('using newspaper3k')
     article = Article(archive_url)
-    article.build()
+    #print('download ({})'.format((time.time() - start) / 60))
+    article.download()
+    #print('parse ({})'.format((time.time() - start) / 60))
+    article.parse()
     page = article.text
     length = len(page)
     update_date = article.publish_date
@@ -269,9 +289,19 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
         update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
         if not update_date:
             # fallback to regex on the original html
-            print('update_date: trying html')
+            print('update_date: trying html (len={})'.format(length))
             update_date = get_update_date(article.html, regex_list=REGEX_POLICY_DATE_LIST)
+            if not update_date and length < 1000:
+                # this means that newspaper3k chopped off an important part of the article
+                # fallback to legacy text extraction method
+                print('extracting text using legacy method')
+                page = make_policy_comparable(article.html, POLICY_BOOKENDS, archive_timestamp)
+                length = len(page)
+    ### warning! nlp will slow policy processing time down considerably
+    #print('nlp ({})'.format((time.time() - start) / 60))
+    article.nlp()
     keywords = article.keywords
+    #print('finished newspaper3k ({})'.format((time.time() - start) / 60))
 
     # check dates
     if update_date and last_date and update_date == last_date:
@@ -281,7 +311,7 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
         if update_date:
             out_path, out = make_policy_file_name(company, update_date)
         else:
-            out = '{}_check_date.txt'.format(archive_timestamp)
+            out = '{}_{}_check_date.txt'.format(company, archive_timestamp)
             out_path = out
         if write:
             with open(out_path, 'wb') as f:

@@ -1,6 +1,7 @@
 from wayback_search import POLICY_DIR, REGEX_POLICY_DATE_LIST, REGEX_POLICY_DATE_MASTER, get_update_date
 from build_master_index import MASTER_CSV
 import pandas as pd
+import datetime
 import unittest
 import os
 import re
@@ -21,7 +22,8 @@ REGEX_FILE_DATE = re.compile(r'(\d+-\d+-\d+)')
 class TestUpdateDateRegex(unittest.TestCase):
 
 
-    def test_policies(self):
+    #def test_policies(self):
+    def no():
         """
         Loop through all policies and test to see if we can pull out a date
         """
@@ -44,6 +46,7 @@ class TestUpdateDateRegex(unittest.TestCase):
             else:
                 # commence test
                 result = get_update_date(policy, regex_list=REGEX_POLICY_DATE_MASTER)
+                print(result)
                 self.assertTrue(result is not None)
                 # reuse get_update_date to pull date out of filename
                 file_date = get_update_date(path, regex_list=[REGEX_FILE_DATE])
@@ -55,10 +58,11 @@ class TestUpdateDateRegex(unittest.TestCase):
     def test_group_or(self):
         """
         """
+        day = datetime.date.today().day
         tests = [
-            ('faeava Effective: November 2003 faeage', (11, 9, 2003)),
-            ('faeava Effective: Nov. 2003 faeage', (11, 9, 2003)),
-            ('faeava Effective: November, 2003 faeage', (11, 9, 2003)),
+            ('faeava Effective: November 2003 faeage', (11, day, 2003)),
+            ('faeava Effective: Nov. 2003 faeage', (11, day, 2003)),
+            ('faeava Effective: November, 2003 faeage', (11, day, 2003)),
             ('ffeafe Effective: November 1, 2003 feage', (11, 1, 2003)),
             ('aabaev Effective: November 2 2003 feafeage', (11, 2, 2003)),
             ('faeava Effective: 3 November 2003 faeage', (11, 3, 2003)),
@@ -133,3 +137,22 @@ class TestUpdateDateRegex(unittest.TestCase):
             self.assertEqual(d.month, answer[0])
             self.assertEqual(d.day, answer[1])
             self.assertEqual(d.year, answer[2])
+
+    def test_others(self):
+        print('test_others')
+        print(REGEX_POLICY_DATE_LIST)
+        tests = [
+            ("last updated on July 21, 2011", (7, 21, 2011)),
+            #("that a child under the age of 13 has", None),
+            ("that a child under the age of 13 has last updated on July 21, 2011", (7, 21, 2011))
+        ]
+        for test, answer in tests:
+            print(test)
+            d = get_update_date(test, REGEX_POLICY_DATE_LIST)
+            print(d)
+            if answer is None:
+                self.assertTrue(d is None)
+            else:
+                self.assertEqual(d.month, answer[0])
+                self.assertEqual(d.day, answer[1])
+                self.assertEqual(d.year, answer[2])

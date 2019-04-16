@@ -1,23 +1,23 @@
-company,policy_date,policy_url,policy_path
-facebook,2005-06-28 00:00:00,http://web.archive.org/web/20060222121022/http://www.facebook.com:80/policy.php,facebook/facebook-2005-06-28.txt
-facebook,2006-02-27 00:00:00,http://web.archive.org/web/20060331184153/http://www.facebook.com:80/policy.php,facebook/facebook-2006-02-27.txt
-facebook,2006-05-22 00:00:00,http://web.archive.org/web/20060529142000/http://www.facebook.com:80/policy.php,facebook/facebook-2006-05-22.txt
-facebook,2006-09-05 00:00:00,http://web.archive.org/web/20061007154130/http://www.facebook.com:80/policy.php,facebook/facebook-2006-09-05.txt
-facebook,2006-10-23 00:00:00,http://web.archive.org/web/20061031143124/http://www.facebook.com:80/policy.php,facebook/facebook-2006-10-23.txt
-facebook,2007-05-24 00:00:00,http://web.archive.org/web/20070630042429/http://www.facebook.com/policy.php,facebook/facebook-2007-05-24.txt
-facebook,2007-09-12 00:00:00,http://web.archive.org/web/20070926190841/http://www.facebook.com/policy.php,facebook/facebook-2007-09-12.txt
-facebook,2007-12-06 00:00:00,http://web.archive.org/web/20080213201320/http://www.facebook.com/policy.php,facebook/facebook-2007-12-06.txt
-facebook,2008-11-26 00:00:00,http://web.archive.org/web/20090114191844/http://www.facebook.com/policy.php,facebook/facebook-2008-11-26.txt
-facebook,2009-11-19 00:00:00,http://web.archive.org/web/20091130171922/http://www.facebook.com/policy.php,facebook/facebook-2009-11-19.txt
-facebook,2009-12-09 00:00:00,http://web.archive.org/web/20100101040835/http://www.facebook.com/policy.php,facebook/facebook-2009-12-09.txt
-facebook,2010-04-22 00:00:00,http://web.archive.org/web/20100430203956/http://www.facebook.com/policy.php,facebook/facebook-2010-04-22.txt
-facebook,2010-10-05 00:00:00,http://web.archive.org/web/20101101222658/https://www.facebook.com/policy.php,facebook/facebook-2010-10-05.txt
-facebook,2010-12-22 00:00:00,http://web.archive.org/web/20101231191335/http://www.facebook.com/policy.php,facebook/facebook-2010-12-22.txt
-facebook,2011-09-07 00:00:00,http://web.archive.org/web/20110915075435/http://www.facebook.com/full_data_use_policy,facebook/facebook-2011-09-07.txt
-facebook,2011-09-23 00:00:00,http://web.archive.org/web/20111103145401/http://www.facebook.com/full_data_use_policy,facebook/facebook-2011-09-23.txt
-facebook,2012-06-08 00:00:00,http://web.archive.org/web/20120701151228/http://www.facebook.com/full_data_use_policy,facebook/facebook-2012-06-08.txt
-facebook,2012-12-11 00:00:00,http://web.archive.org/web/20121231181717/https://www.facebook.com/full_data_use_policy,facebook/facebook-2012-12-11.txt
-facebook,2013-11-15 00:00:00,http://web.archive.org/web/20131120095527/https://www.facebook.com/full_data_use_policy,facebook/facebook-2013-11-15.txt
-facebook,2015-01-30 00:00:00,http://web.archive.org/web/20150203225903/https://www.facebook.com/full_data_use_policy,facebook/facebook-2015-01-30.txt
-facebook,2016-09-29 00:00:00,http://web.archive.org/web/20161004051612/https://www.facebook.com/full_data_use_policy,facebook/facebook-2016-09-29.txt
-facebook,2018-04-19 00:00:00,http://web.archive.org/web/20180701031357/https://www.facebook.com/full_data_use_policy,facebook/facebook-2018-04-19.txt
+company,policy_date,policy_keywords,policy_url,policy_length,policy_path
+facebook,2005-06-28 00:00:00,"web, privacy, site, users, 13, email, cookies, information, personal, policy, facebook",6911,http://web.archive.org/web/20060222121022/http://www.facebook.com:80/policy.php,facebook/facebook-2005-06-28.txt
+facebook,2006-02-27 00:00:00,"service, provide, privacy, users, settings, personal, information, share, profile, policy, facebook",14187,http://web.archive.org/web/20060331184153/http://www.facebook.com:80/policy.php,facebook/facebook-2006-02-27.txt
+facebook,2006-05-22 00:00:00,"service, provide, policy, privacy, personal, send, information, share, profile, users, facebook",16595,http://web.archive.org/web/20060529142000/http://www.facebook.com:80/policy.php,facebook/facebook-2006-05-22.txt
+facebook,2006-09-05 00:00:00,"service, provide, policy, privacy, personal, send, information, share, profile, users, facebook",17473,http://web.archive.org/web/20061007154130/http://www.facebook.com:80/policy.php,facebook/facebook-2006-09-05.txt
+facebook,2006-10-23 00:00:00,"provide, access, policy, service, privacy, site, personal, information, profile, users, facebook",18883,http://web.archive.org/web/20061031143124/http://www.facebook.com:80/policy.php,facebook/facebook-2006-10-23.txt
+facebook,2007-05-24 00:00:00,"service, policy, platform, privacy, settings, personal, information, share, profile, users, facebook",21904,http://web.archive.org/web/20070630042429/http://www.facebook.com/policy.php,facebook/facebook-2007-05-24.txt
+facebook,2007-09-12 00:00:00,"service, policy, platform, privacy, settings, personal, information, share, profile, users, facebook",21979,http://web.archive.org/web/20070926190841/http://www.facebook.com/policy.php,facebook/facebook-2007-09-12.txt
+facebook,2007-12-06 00:00:00,"service, provide, platform, privacy, users, settings, information, share, personal, policy, facebook",23722,http://web.archive.org/web/20080213201320/http://www.facebook.com/policy.php,facebook/facebook-2007-12-06.txt
+facebook,2008-11-26 00:00:00,"policy, privacy",23704,http://web.archive.org/web/20090114191844/http://www.facebook.com/policy.php,facebook/facebook-2008-11-26.txt
+facebook,2009-11-19 00:00:00,"privacy, connect, helps, upfacebook, life, share, sign, policy",75,http://web.archive.org/web/20091130171922/http://www.facebook.com/policy.php,facebook/facebook-2009-11-19.txt
+facebook,2009-12-09 00:00:00,"privacy, connect, helps, upfacebook, life, share, sign, policy",75,http://web.archive.org/web/20100101040835/http://www.facebook.com/policy.php,facebook/facebook-2009-12-09.txt
+facebook,2010-04-22 00:00:00,"provide, access, privacy, friends, users, help, information, share, profile, policy, facebook",36179,http://web.archive.org/web/20100430203956/http://www.facebook.com/policy.php,facebook/facebook-2010-04-22.txt
+facebook,2010-10-05 00:00:00,"applications, provide, access, privacy, users, help, information, share, profile, policy, facebook",36376,http://web.archive.org/web/20101101222658/https://www.facebook.com/policy.php,facebook/facebook-2010-10-05.txt
+facebook,2010-12-22 00:00:00,"applications, provide, access, privacy, friends, users, information, share, profile, policy, facebook",36512,http://web.archive.org/web/20101231191335/http://www.facebook.com/policy.php,facebook/facebook-2010-12-22.txt
+facebook,2011-09-07 00:00:00,"applications, user, friends, site, public, information, receive, share, profile, facebook",39101,http://web.archive.org/web/20110915075435/http://www.facebook.com/full_data_use_policy,facebook/facebook-2011-09-07.txt
+facebook,2011-09-23 00:00:00,"applications, user, friends, site, public, information, receive, share, profile, facebook",39102,http://web.archive.org/web/20111103145401/http://www.facebook.com/full_data_use_policy,facebook/facebook-2011-09-23.txt
+facebook,2012-06-08 00:00:00,"applications, timeline, friends, account, data, public, information, share, ads, facebook",51330,http://web.archive.org/web/20120701151228/http://www.facebook.com/full_data_use_policy,facebook/facebook-2012-06-08.txt
+facebook,2012-12-11 00:00:00,"applications, timeline, friends, data, public, information, share, example, ads, facebook",54190,http://web.archive.org/web/20121231181717/https://www.facebook.com/full_data_use_policy,facebook/facebook-2012-12-11.txt
+facebook,2013-11-15 00:00:00,"timeline, access, friends, data, public, information, share, example, page, facebook",55997,http://web.archive.org/web/20131120095527/https://www.facebook.com/full_data_use_policy,facebook/facebook-2013-11-15.txt
+facebook,2015-01-30 00:00:00,"collect, provide, account, content, services, partners, share, information, policy, facebook",19446,http://web.archive.org/web/20150203225903/https://www.facebook.com/full_data_use_policy,facebook/facebook-2015-01-30.txt
+facebook,2016-09-29 00:00:00,"collect, provide, account, content, services, partners, share, information, policy, facebook",19445,http://web.archive.org/web/20161004051612/https://www.facebook.com/full_data_use_policy,facebook/facebook-2016-09-29.txt
+facebook,2018-04-19 00:00:00,"provide, content, data, instagram, public, services, information, share, products, facebook",15701,http://web.archive.org/web/20180701031357/https://www.facebook.com/full_data_use_policy,facebook/facebook-2018-04-19.txt
