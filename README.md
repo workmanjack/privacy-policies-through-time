@@ -28,17 +28,29 @@ For more examples, please view [this notebook](/notebooks/privacy-policies-throu
 
 ### International Safe Harbor Privacy Principles
 
-![safe_harbor_heatmap](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/figures/safe-harbor-heatmap.PNG)
+![safe_harbor_heatmap](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figures/safe-harbor-heatmap.PNG)
 
 ### EU-US Privacy Shield
 
-![eu-us-privacy-shield-heatmap](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/figures/eu-us-privacy-shield-heatmap.PNG)
+![eu-us-privacy-shield-heatmap](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figures/eu-us-privacy-shield-heatmap.PNG)
 
+## Readability Over Time
 
+This dataset also allows us to assess the readability level of these policies over time. Legislation like GDPR advocates for these documents to be readable and transparent, so one might expect the reading level to go over time. However, a quick analysis of lexicon count and grade level (using the [Flesch Kincaid Grade Level Test](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)) actually shows the opposite.
 
-## Adding to the Policy Collection
+### Lexicon Count
 
-### Getting Started
+![faang-privacy-policy-lexicon-count](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figures/faang-privacy-policy-lexicon-count.png)
+
+### Flesch Kincaid Grade Level Test
+
+![faang-privacy-policy-flesch-kincaid-count](https://raw.githubusercontent.com/workmanjack/privacy-policies-through-time/master/report/figures/faang-privacy-policy-flesch-kincaid-count.png)
+
+# Adding to the Policy Collection
+
+This project is designed for others to contribute. Keep reading below to learn how to leave your mark on the field of data privacy law and ethics.
+
+## Getting Started
 
 Recommended Python version: 3.6
 
@@ -51,7 +63,7 @@ To initialize the environment, run:
 
 Then follow the instructions in the paper to navigate the Wayback Machine, create configuration files, and execute wayback_search.py.
 
-### Notes
+## Notes
 
 Some sites are easier than others
 
