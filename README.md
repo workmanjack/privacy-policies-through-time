@@ -36,7 +36,7 @@ For more examples, please view [this notebook](/notebooks/privacy-policies-throu
 
 ## Readability Over Time
 
-This dataset also allows us to assess the readability level of these policies over time. Legislation like GDPR advocates for these documents to be readable and transparent, so one might expect the reading level to go over time. However, a quick analysis of lexicon count and grade level (using the [Flesch Kincaid Grade Level Test](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)) actually shows the opposite.
+This dataset also allows us to assess the readability level of these policies over time. Legislation like GDPR advocates for these documents to be readable and transparent, so one might expect the reading level to trend downwards. However, a quick analysis of lexicon count and grade level (using the [Flesch Kincaid Grade Level Test](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)) actually shows the opposite.
 
 ### Lexicon Count
 
