@@ -1,4 +1,5 @@
 from datetime import date, timedelta, datetime
+from newspaper import Article
 from shutil import move
 import urllib.parse
 import dateparser
@@ -253,6 +254,33 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
     update_date = None
     out = None
 
+    article = Article(archive_url)
+    article.build()
+    page = article.text
+    length = len(page)
+    update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
+    keywords = article.keywords
+
+    # check dates
+    if update_date and last_date and update_date == last_date:
+        print('{} ({}) no change'.format(archive_timestamp, update_date))
+    else:
+        last_date = update_date
+        if update_date:
+            out_path, out = make_policy_file_name(company, update_date)
+        else:
+            out = '{}_check_date.txt'.format(archive_timestamp)
+            out_path = out
+        if write:
+            with open(out_path, 'wb') as f:
+                f.write(page.encode('UTF-8'))
+
+            print('{} ({}) written to {}'.format(archive_timestamp, update_date, out))
+
+    return update_date, out, keywords, length
+
+
+    ### old method
     resp = requests.get(url=archive_url)
     if resp.status_code != 200:
         print('failed to retrieve data from {0}'.format(archive_url))
@@ -310,6 +338,10 @@ def main():
     os.makedirs(os.path.join(POLICY_DIR, company), exist_ok=True)
 
     links = config.get('links', None)
+    configs = config.get('configs', None)
+
+    ### For Configs with Links
+
     if links:
         # for when we have the direct links to previous policies
         for link in links:
@@ -328,7 +360,8 @@ def main():
             row = [company, policy_date, link, policy_path]
             rows.append(row)
 
-    configs = config.get('configs', None)
+    ### For Configs with Configs
+
     if configs:
 
         for cfg in config['configs']:
@@ -370,11 +403,11 @@ def main():
                     print('{} -> {}'.format(timestamp, archive_timestamp))
                     continue
 
-                policy_date, policy_path = process_policy(company, archive_url, archive_timestamp, last_date)
+                policy_date, policy_path, policy_keywords, policy_length = process_policy(company, archive_url, archive_timestamp, last_date)
 
                 if date_url:
                     # some websites have the update date on a different page than the privacy policy, we handle that here
-                    policy_date, _ = process_policy(company, date_url, archive_timestamp, last_date, write=True)
+                    policy_date, _, _, _ = process_policy(company, date_url, archive_timestamp, last_date, write=True)
 
                 if not policy_date:
                     print('Check date (timestamp={}, archive={})'.format(timestamp, archive_timestamp))
@@ -385,6 +418,8 @@ def main():
                     last_date = policy_date
                     snapshots.append(archive_timestamp)
                     row.append(policy_date)
+                    row.append(', '.join(policy_keywords))
+                    row.append(policy_length)
                     row.append(archive_url)
                     row.append(policy_path)
                     rows.append(row)
@@ -396,7 +431,7 @@ def main():
     csv_path = os.path.join(POLICY_DIR, csv_out)
     with open(csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['company', 'policy_date', 'policy_url', 'policy_path'])
+        csvwriter.writerow(['company', 'policy_date', 'policy_keywords', 'policy_url', 'policy_length', 'policy_path'])
         for row in rows:
             csvwriter.writerow(row)
     print('csv index written to {}'.format(csv_out))
