@@ -36,6 +36,7 @@
         ["https://policies.google.com/privacy/archive/19990920?hl=en-US", "09201999"],
         ["https://policies.google.com/privacy/archive/20010104?hl=en-US", "01042001"],
         ["https://policies.google.com/privacy/archive/20040701?hl=en-US", "07012004"],
-        ["https://policies.google.com/privacy/archive/20180525?hl=en-US", "05252018"]
+        ["https://policies.google.com/privacy/archive/20180525?hl=en-US", "05252018"],
+        ["https://policies.google.com/privacy?hl=en-US", "01222019"]
     ]
 }

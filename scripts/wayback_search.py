@@ -50,7 +50,7 @@ REGEX_POLICY_DATE_MASTER = [
         r'(\d+-\d+-\d+)' +             # 11-3-2003 | 3-11-2003
         r')', flags=re.IGNORECASE)
 ]
-REGEX_POLICY_DATE_LIST = [
+REGEX_POLICY_DATE_MULTIPLE = [
     re.compile(r'Privacy Policy\s*(\w+ \d+, \d+)'),
     re.compile(r'\n(\d+-\d+-\d+)'),
     re.compile(r'\n(\w+ \d+, \d+)'),
@@ -84,7 +84,7 @@ REGEX_POLICY_DATE_LIST = [
     re.compile(r'Updated: (.*)\n', flags=re.IGNORECASE),
     re.compile(r'Effective:? (.*)\n', flags=re.IGNORECASE),
 ]
-
+REGEX_POLICY_DATE_LIST = REGEX_POLICY_DATE_MASTER
 
 def print_debug(msg):
     if DEBUG:
@@ -121,6 +121,8 @@ def api_query(url):
 
 def remove_wayback(page):
     """
+    DEPRECATED by newspaper3k
+
     Given a wayback archive url, this function will remove all wayback inserted
     text from the html and return just the original page
 
@@ -146,6 +148,8 @@ def remove_wayback(page):
 
 def make_policy_comparable(page, policy_bookends, timestamp):
     """
+    DEPRECATED by newspaper3k
+
     Returns:
         str, specially formatted for comparison
         str, formatted for printing
@@ -273,7 +277,7 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
             out_path = out
         if write:
             with open(out_path, 'wb') as f:
-                f.write(page.encode('UTF-8'))
+                f.write(page.encode("utf-8"))
 
             print('{} ({}) written to {}'.format(archive_timestamp, update_date, out))
 
@@ -345,7 +349,8 @@ def main():
     if links:
         # for when we have the direct links to previous policies
         for link in links:
-            policy_date, policy_path = process_policy(company, link, 'linked', None)
+            policy_date, policy_path, policy_keywords, policy_length = process_policy(company, link, 'linked', None)
+
             if not policy_date:
                 # failed to read date from document, do we have it in config?
                 dates = config.get('dates', list())
@@ -357,7 +362,8 @@ def main():
                         move(policy_path, out_path)
                         policy_path = out
                         print('Moved _check_date to {}'.format(out_path))
-            row = [company, policy_date, link, policy_path]
+
+            row = [company, policy_date, ', '.join(policy_keywords), policy_length, link, policy_path]
             rows.append(row)
 
     ### For Configs with Configs
@@ -387,8 +393,6 @@ def main():
             last_date = None
             for year, month in month_year_iter(start_date.month, start_date.year, end_date.month, end_date.year):
 
-                row = [company]
-
                 check_date = date(year, month, 1)
                 # check if snapshot exists for this date
                 timestamp = check_date.strftime('%Y%m%d')
@@ -417,11 +421,7 @@ def main():
                     # no need to save if we skip due to snapshots
                     last_date = policy_date
                     snapshots.append(archive_timestamp)
-                    row.append(policy_date)
-                    row.append(', '.join(policy_keywords))
-                    row.append(policy_length)
-                    row.append(archive_url)
-                    row.append(policy_path)
+                    row = [company, policy_date, ', '.join(policy_keywords), policy_length, archive_url, policy_path]
                     rows.append(row)
                 elif args.abort and policy_path and '_check_date' in policy_path:
                     # we couldn't detect the date... abort
