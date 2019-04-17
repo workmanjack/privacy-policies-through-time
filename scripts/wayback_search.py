@@ -262,7 +262,15 @@ def process_policy(company, archive_url, archive_timestamp, last_date, write=Tru
     article.build()
     page = article.text
     length = len(page)
-    update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
+    update_date = article.publish_date
+    if not update_date:
+        # fallback to the regex method
+        print('update_date: trying regex')
+        update_date = get_update_date(page, regex_list=REGEX_POLICY_DATE_LIST)
+        if not update_date:
+            # fallback to regex on the original html
+            print('update_date: trying html')
+            update_date = get_update_date(article.html, regex_list=REGEX_POLICY_DATE_LIST)
     keywords = article.keywords
 
     # check dates
