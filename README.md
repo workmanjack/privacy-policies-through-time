@@ -34,6 +34,8 @@ For more examples, please view [this notebook](/notebooks/privacy-policies-throu
 
 ![eu-us-privacy-shield-heatmap](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/figures/eu-us-privacy-shield-heatmap.PNG)
 
+
+
 ## Adding to the Policy Collection
 
 ### Getting Started
