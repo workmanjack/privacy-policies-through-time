@@ -34,7 +34,22 @@ For more examples, please view [this notebook](/notebooks/privacy-policies-throu
 
 ![eu-us-privacy-shield-heatmap](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/figures/eu-us-privacy-shield-heatmap.PNG)
 
-## Notes On Policy Collection
+## Adding to the Policy Collection
+
+### Getting Started
+
+Recommended Python version: 3.6
+
+To initialize the environment, run:
+
+* python -m venv ".pptt"
+* pip install -r requirements
+* Windows: .pptt\Scripts\activate
+* Linux: source .pptt/bin/activate
+
+Then follow the instructions in the paper to navigate the Wayback Machine, create configuration files, and execute wayback_search.py.
+
+### Notes
 
 Some sites are easier than others
 
