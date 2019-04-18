@@ -1,8 +1,10 @@
 # Privacy Policies Through Time
 
-A collection of privacy policies organized by company and revision date
+A collection of privacy policies through time organized by company and revision date
 
 Begin exploring the dataset via [this notebook](/notebooks/privacy-policies-through-time.ipynb) and the [master-privacy-policies-index.csv](/privacy-policies-through-time/master-privacy-policies-index.csv) index.
+
+And please check out the dataset [paper](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/workman_privacy-policies-through-time_final-paper.pdf) and [presentation](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/workman_privacy-policies-through-time_final-presentation.pdf).
 
 ## Objective
 
@@ -16,7 +18,7 @@ Other privacy policy datasets cover only recent policies and do not connect revi
 
 ## Dataset Metadata
 
-* Number of Privacy Policies: 295
+* Number of Privacy Policies: 294
 * Number of Companies: 21
 * Date Range: June 9th, 1999 - January 1st, 2019
 
@@ -61,7 +63,13 @@ To initialize the environment, run:
 * Windows: .pptt\Scripts\activate
 * Linux: source .pptt/bin/activate
 
-Then follow the instructions in the paper to navigate the Wayback Machine, create configuration files, and execute wayback_search.py.
+Then follow the instructions in the [paper](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/workman_privacy-policies-through-time_final-paper.pdf) to navigate the Wayback Machine, create configuration files, and execute _wayback_search.py_.
+
+## Index CSV files
+
+As discussed in the [paper](https://github.com/workmanjack/privacy-policies-through-time/blob/master/report/workman_privacy-policies-through-time_final-paper.pdf), each company has an associated index file and these files are aggregated into the [master-privacy-policies-index.csv](https://github.com/workmanjack/privacy-policies-through-time/blob/master/privacy-policies-through-time/master-privacy-policies-index.csv) file.
+
+After executing _wayback_search.py_, execute _build_master_index.py_ to reconstruct the master index with the latest privacy policies. Before committing, make sure to run _remove_duplicates.py_ to remove any duplicates that might have made their way into the index files (this is an unfortunate but not unfixable side effect of using Wayback Machine and querying by month).
 
 ## Notes
 
